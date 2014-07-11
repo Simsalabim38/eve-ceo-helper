@@ -21,5 +21,10 @@ namespace corp_management
         {
 
         }
+
+        private void tabPage5_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
