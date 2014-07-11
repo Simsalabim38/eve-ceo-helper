@@ -8,3 +8,6 @@ c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp manag
 c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp management.exe
 c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp management.pdb
 c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp_management.Form2.resources
+C:\Users\wesley\Documents\eve-ceo-helper\corp management\bin\Debug\corp management.exe.config
+C:\Users\wesley\Documents\eve-ceo-helper\corp management\obj\Debug\corp management.exe
+C:\Users\wesley\Documents\eve-ceo-helper\corp management\obj\Debug\corp management.pdb
