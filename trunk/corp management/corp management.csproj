@@ -32,6 +32,36 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EveLib.Core">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.Element43">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.Element43.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.EveCentral">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveCentral.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.EveCrest">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveCrest.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.EveMarketData">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveMarketData.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.EveOnline">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveOnline.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.EveWho">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveWho.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.StaticData">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.StaticData.dll</HintPath>
+    </Reference>
+    <Reference Include="EveLib.ZKillboard">
+      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.ZKillboard.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -73,6 +103,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
