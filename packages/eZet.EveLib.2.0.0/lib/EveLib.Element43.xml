@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EveLib.Element43</name>
+    </assembly>
+    <members>
+        <member name="T:eZet.EveLib.Modules.Element43Legacy">
+            <summary>
+            Class for accessing the Element43 Legacy API
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.Element43Legacy.DefaultUri">
+            <summary>
+            The default api URI 
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.Element43Legacy.#ctor">
+            <summary>
+                Default constructor, with a default base uri and request handler.
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.Element43Legacy.GetMarketStat(eZet.EveLib.Modules.Element43Options)">
+            <summary>
+                Returns aggregate statistics for the items specified.
+            </summary>
+            <param name="options">Valid options; Items, HourLimit, MinQuantity, Regions, Systems</param>
+            <returns></returns>
+        </member>
+        <member name="M:eZet.EveLib.Modules.Element43Legacy.GetMarketStatAsync(eZet.EveLib.Modules.Element43Options)">
+            <summary>
+                Returns aggregate statistics for the items specified.
+            </summary>
+            <param name="options">Valid options; Items, HourLimit, MinQuantity, Regions, Systems</param>
+            <returns></returns>
+        </member>
+        <member name="P:eZet.EveLib.Modules.Element43Legacy.BaseUri">
+            <summary>
+                Gets or sets the base URI for requests.
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.Element43Legacy.RequestHandler">
+            <summary>
+                Gets or sets the RequestHandler used to perform requests.
+            </summary>
+        </member>
+        <member name="T:eZet.EveLib.Modules.Element43Options">
+            <summary>
+                Provides a set of configurable options for EveCentral requests.
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.Element43Options.#ctor">
+            <summary>
+                Creates a new options object.
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.Element43Options.GetItemQuery(System.String)">
+            <summary>
+                Returns items in a query string format.
+            </summary>
+            <param name="paramName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:eZet.EveLib.Modules.Element43Options.Items">
+            <summary>
+                Gets or sets a collection of type IDs.
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.Element43Options.Region">
+            <summary>
+                Gets or sets a collection of region IDs.
+            </summary>
+        </member>
+    </members>
+</doc>
