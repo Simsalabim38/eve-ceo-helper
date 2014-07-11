@@ -1,0 +1,10 @@
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\bin\Debug\corp management.exe.config
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\bin\Debug\corp management.exe
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\bin\Debug\corp management.pdb
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp management.csprojResolveAssemblyReference.cache
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp_management.Form1.resources
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp_management.Properties.Resources.resources
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp management.csproj.GenerateResource.Cache
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp management.exe
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp management.pdb
+c:\users\wesley\documents\visual studio 2013\Projects\corp management\corp management\obj\Debug\corp_management.Form2.resources
