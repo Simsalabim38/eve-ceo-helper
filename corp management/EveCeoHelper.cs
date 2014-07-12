@@ -28,9 +28,11 @@ namespace corp_management
             key = f.Key;
             int keyInt = 0;
             keyInt = Convert.ToInt32(key);
+            if (keyInt == null || keyInt == 0)
+                this.Close();
             verifCode = f.Vcode;
             ApiKey apiKey = EveOnlineApi.CreateApiKey(keyInt,verifCode);
-            if (!apiKey.IsInitialized)
+            if (!apiKey.IsInitialized && apiKey.IsValidKey())
                 apiKey.Init();
         }
     }
