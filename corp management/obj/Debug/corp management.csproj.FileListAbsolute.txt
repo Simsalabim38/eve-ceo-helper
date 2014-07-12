@@ -40,3 +40,32 @@ C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveOnline
 C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.StaticData.xml
 C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.ZKillboard.xml
 C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\corp management.exe.config
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp management.exe
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp management.pdb
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\corp management.exe
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\corp management.pdb
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.Core.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.Element43.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCentral.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCrest.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveMarketData.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveOnline.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveWho.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.StaticData.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.ZKillboard.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.Core.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.Element43.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCentral.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCrest.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveMarketData.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.EveOnline.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.StaticData.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\EveLib.ZKillboard.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp management.csprojResolveAssemblyReference.cache
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp_management.ApiKeyInputForm.resources
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp_management.EveCeoHelper.resources
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp_management.Properties.Resources.resources
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp management.csproj.GenerateResource.Cache

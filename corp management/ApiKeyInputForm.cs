@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using corp_management.Helper;
 
 namespace corp_management
 {
@@ -35,6 +36,13 @@ namespace corp_management
         {
             Key = textboxKey.Text.Trim();
             Vcode = textBoxVerifCode.Text.Trim();
+
+            if(!EveApiKeyHelper.IsCorpKey(Key, Vcode))
+            {
+                MessageBox.Show("Key is not of type Corporation, please try again....");
+                return;
+            }
+
             Microsoft.Win32.RegistryKey key;
             key = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("EveCeoHelper");
             if (checkBox1.Checked)
