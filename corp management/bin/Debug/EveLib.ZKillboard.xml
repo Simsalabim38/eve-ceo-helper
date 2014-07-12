@@ -1,0 +1,287 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EveLib.ZKillboard</name>
+    </assembly>
+    <members>
+        <member name="T:eZet.EveLib.Modules.ZKillboard">
+            <summary>
+            Class for accessing the ZKillboard API
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboard.DefaultUri">
+            <summary>
+            Default base URI.
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.GetKills(eZet.EveLib.Modules.ZKillboardOptions)">
+            <summary>
+            Returns kill mails
+            </summary>
+            <param name="options">ZKillboard options</param>
+            <returns>Kill mails</returns>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.GetKillsAsync(eZet.EveLib.Modules.ZKillboardOptions)">
+            <summary>
+            Returns kill mails
+            </summary>
+            <param name="options">ZKillboard options</param>
+            <returns>Kill mails</returns>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.GetLosses(eZet.EveLib.Modules.ZKillboardOptions)">
+            <summary>
+            Returns loss mails
+            </summary>
+            <param name="options">ZKillboard options</param>
+            <returns>Loss mails</returns>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.GetLossesAsync(eZet.EveLib.Modules.ZKillboardOptions)">
+            <summary>
+            Returns loss mails
+            </summary>
+            <param name="options">ZKillboard options</param>
+            <returns>Loss mails</returns>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.GetAll(eZet.EveLib.Modules.ZKillboardOptions)">
+            <summary>
+            Returns both Kill and loss mails
+            </summary>
+            <param name="options">ZKillboard options</param>
+            <returns>Kill and loss mails</returns>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboard.GetAllAsync(eZet.EveLib.Modules.ZKillboardOptions)">
+            <summary>
+            Returns both Kill and loss mails
+            </summary>
+            <param name="options">ZKillboard options</param>
+            <returns>Kill and loss mails</returns>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboard.EnableCacheLoad">
+            <summary>
+                Gets or sets whether data can be loaded from the cache.
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboard.EnableCacheStore">
+            <summary>
+                Gets or sets whether data can be stored in the cache.
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboard.IsCacheHandler">
+            <summary>
+                Returns true if the current request handler supports caching.
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboard.BaseUri">
+            <summary>
+            Gets or sets the default base URI
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboard.RequestHandler">
+            <summary>
+            Gets or sets the request handler
+            </summary>
+        </member>
+        <member name="T:eZet.EveLib.Modules.ZKillboardOptions">
+            <summary>
+            Represents options for ZKillboard requests
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboardOptions.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:eZet.EveLib.Modules.ZKillboardOptions.GetQueryString(System.String)">
+            <summary>
+            Creates and returns a query string for the options
+            </summary>
+            <param name="uri"></param>
+            <returns></returns>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.CharacterId">
+            <summary>
+            Gets or sets the character ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.CorporationId">
+            <summary>
+            Gets or sets the corporation ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.AllianceId">
+            <summary>
+            Gets or sets the alliance ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.FactionId">
+            <summary>
+            Gets or sets the faction ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.ShiptypeId">
+            <summary>
+            Gets or sets the ship type ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.GroupId">
+            <summary>
+            Gets or sets the group ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.SolarsystemId">
+            <summary>
+            Gets or sets the solar system ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.RegionId">
+            <summary>
+            Gets or sets the region ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Order">
+            <summary>
+            Gets or sets the order direction
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Limit">
+            <summary>
+            Gets or sets the limit for returned rows
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Page">
+            <summary>
+            Gets or sets the page 
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.StartTime">
+            <summary>
+            Gets or sets the start time
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.EndTime">
+            <summary>
+            Gets or sets the end time
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Year">
+            <summary>
+            Gets or sets the year
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Month">
+            <summary>
+            Gets or sets the month
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Week">
+            <summary>
+            Gets or sets the week
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Format">
+            <summary>
+            Gets or sets the format
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.BeforeKillId">
+            <summary>
+            Gets or sets the before kill ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.AfterKillId">
+            <summary>
+            Gets or sets the after kill ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.PastSeconds">
+            <summary>
+            Gets or sets the past seconds limit
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.KillId">
+            <summary>
+            Gets or sets the kill ID
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.NoItems">
+            <summary>
+            Set to true to ignore items
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.NoAttackers">
+            <summary>
+            Set to true to ignore attackers
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.ApiOnly">
+            <summary>
+            Set to true to only return killmails verified through API
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.Solo">
+            <summary>
+            Set to true to only return solo kills
+            </summary>
+        </member>
+        <member name="P:eZet.EveLib.Modules.ZKillboardOptions.WSpace">
+            <summary>
+            Set tot true to only return wspace kills
+            </summary>
+        </member>
+        <member name="T:eZet.EveLib.Modules.ZKillboardOptions.DataFormat">
+            <summary>
+            Represents the data formats for requests
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.DataFormat.Json">
+            <summary>
+            JSON
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.DataFormat.Xml">
+            <summary>
+            XML
+            </summary>
+        </member>
+        <member name="T:eZet.EveLib.Modules.ZKillboardOptions.MailType">
+            <summary>
+            Represents mail types
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.MailType.Kills">
+            <summary>
+            Kills
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.MailType.Losses">
+            <summary>
+            Losses
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.MailType.Both">
+            <summary>
+            Kills and losses
+            </summary>
+        </member>
+        <member name="T:eZet.EveLib.Modules.ZKillboardOptions.OrderDirection">
+            <summary>
+            Represents the order directions
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.OrderDirection.Descending">
+            <summary>
+            Descending order
+            </summary>
+        </member>
+        <member name="F:eZet.EveLib.Modules.ZKillboardOptions.OrderDirection.Ascending">
+            <summary>
+            Ascending order
+            </summary>
+        </member>
+    </members>
+</doc>
