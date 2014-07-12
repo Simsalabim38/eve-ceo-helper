@@ -46,15 +46,18 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
             this.textBox1.Size = new System.Drawing.Size(45, 13);
-            this.textBox1.TabIndex = 0;
+            this.textBox1.TabIndex = 21;
             this.textBox1.Text = "Key ID:";
             // 
             // textboxKey
             // 
+            this.textboxKey.BackColor = System.Drawing.SystemColors.Window;
+            this.textboxKey.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
             this.textboxKey.Location = new System.Drawing.Point(118, 38);
             this.textboxKey.Name = "textboxKey";
+            this.textboxKey.ReadOnly = true;
             this.textboxKey.Size = new System.Drawing.Size(126, 20);
-            this.textboxKey.TabIndex = 1;
+            this.textboxKey.TabIndex = 0;
             // 
             // textBox3
             // 
@@ -64,7 +67,7 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.ReadOnly = true;
             this.textBox3.Size = new System.Drawing.Size(97, 13);
-            this.textBox3.TabIndex = 2;
+            this.textBox3.TabIndex = 10;
             this.textBox3.Text = "Verification Code:";
             // 
             // textBoxVerifCode
@@ -72,7 +75,7 @@
             this.textBoxVerifCode.Location = new System.Drawing.Point(118, 65);
             this.textBoxVerifCode.Name = "textBoxVerifCode";
             this.textBoxVerifCode.Size = new System.Drawing.Size(366, 20);
-            this.textBoxVerifCode.TabIndex = 3;
+            this.textBoxVerifCode.TabIndex = 2;
             // 
             // button1
             // 
@@ -87,10 +90,10 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(281, 108);
+            this.checkBox1.Location = new System.Drawing.Point(12, 108);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(97, 17);
-            this.checkBox1.TabIndex = 5;
+            this.checkBox1.TabIndex = 3;
             this.checkBox1.Text = "Remember API";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
