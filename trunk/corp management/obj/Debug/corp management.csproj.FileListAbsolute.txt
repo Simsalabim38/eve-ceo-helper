@@ -14,3 +14,29 @@ C:\Users\wesley\Documents\eve-ceo-helper\corp management\obj\Debug\corp manageme
 C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\corp management.exe.config
 C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp management.exe
 C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp management.pdb
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp management.csprojResolveAssemblyReference.cache
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp_management.ApiKeyInputForm.resources
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp_management.EveCeoHelper.resources
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp_management.Properties.Resources.resources
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\obj\Debug\corp management.csproj.GenerateResource.Cache
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\corp management.exe
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\corp management.pdb
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.Core.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.Element43.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCentral.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCrest.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveMarketData.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveOnline.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveWho.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.StaticData.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.ZKillboard.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.Core.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.Element43.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCentral.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveCrest.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveMarketData.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.EveOnline.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.StaticData.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\EveLib.ZKillboard.xml
+C:\Users\Nat\Documents\eve-ceo-helper\corp management\bin\Debug\Newtonsoft.Json.xml
