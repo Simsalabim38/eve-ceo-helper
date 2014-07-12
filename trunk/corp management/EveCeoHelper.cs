@@ -35,5 +35,10 @@ namespace corp_management
             if (!apiKey.IsInitialized && apiKey.IsValidKey())
                 apiKey.Init();
         }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+
+        }
     }
 }
