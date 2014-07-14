@@ -62,5 +62,11 @@ namespace corp_management
             this.Close();
         }
 
+        private void ApiKeyInputForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }
