@@ -51,11 +51,11 @@
             // 
             // textboxKey
             // 
+            this.textboxKey.AllowDrop = true;
             this.textboxKey.BackColor = System.Drawing.SystemColors.Window;
-            this.textboxKey.ImeMode = System.Windows.Forms.ImeMode.Hiragana;
+            this.textboxKey.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.textboxKey.Location = new System.Drawing.Point(118, 38);
             this.textboxKey.Name = "textboxKey";
-            this.textboxKey.ReadOnly = true;
             this.textboxKey.Size = new System.Drawing.Size(126, 20);
             this.textboxKey.TabIndex = 0;
             // 
@@ -121,6 +121,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ApiKeyInputForm";
             this.Text = "API Key";
+            this.Load += new System.EventHandler(this.ApiKeyInputForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

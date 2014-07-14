@@ -69,3 +69,4 @@ C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp man
 C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp_management.EveCeoHelper.resources
 C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp_management.Properties.Resources.resources
 C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp management.csproj.GenerateResource.Cache
+C:\Users\Supermann\Documents\Visual Studio 2013\Projects\eve-ceo-helper\corp management\obj\Debug\corp_management.Helper.CorpDetails.resources
