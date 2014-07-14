@@ -7,6 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using eZet.EveLib.Modules.Models;
+using eZet.EveLib.Modules;
+using eZet.EveLib.Modules.Models.Character;
 
 namespace corp_management.Helper
 {
@@ -31,7 +34,14 @@ namespace corp_management.Helper
 
             this.text_corp_name.Text = corp.CorporationName;
             this.text_alliance_name.Text = corp.AllianceName;
-            
+
+            // TODO: Retrieve Journal Tax data
+            EveApiResponse<WalletJournal> wallet = corp.GetWalletJournal(1000, 500, 0);
+            DateTime startDate = new DateTime(2014,7,1);
+            /*foreach (EveOnlineRowCollection<WalletJournal.JournalEntry> jEntry in (WalletJournal.JournalEntry)wallet.Result.Journal.Select(x => x.RefTypeId == 85).ToList())
+            {
+
+            }*/
 
         }
     }
