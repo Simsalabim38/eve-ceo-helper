@@ -38,10 +38,24 @@ namespace corp_management.Helper
             // TODO: Retrieve Journal Tax data
             EveApiResponse<WalletJournal> wallet = corp.GetWalletJournal(1000, 500, 0);
             DateTime startDate = new DateTime(2014,7,1);
-            /*foreach (EveOnlineRowCollection<WalletJournal.JournalEntry> jEntry in (WalletJournal.JournalEntry)wallet.Result.Journal.Select(x => x.RefTypeId == 85).ToList())
-            {
+            List<WalletJournal.JournalEntry> filteredJournals = new List<WalletJournal.JournalEntry>();
 
-            }*/
+            for(int i=0; i < wallet.Result.Journal.Count(); i++)
+            {
+                WalletJournal.JournalEntry jEntry = wallet.Result.Journal[i];
+                
+                if (jEntry.RefTypeId != 85)
+                    continue;
+
+                if (jEntry.Date < startDate)
+                    continue;
+                filteredJournals.Add(wallet.Result.Journal[i]);
+
+            }
+
+            var taxTotal = filteredJournals.Select(x => x.Amount).Sum();
+            var taxUser = filteredJournals.Select(x => x.ParticipantName).Distinct();
+
 
         }
     }
