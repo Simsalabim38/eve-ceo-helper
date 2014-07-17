@@ -36,25 +36,11 @@ namespace corp_management.Helper
             this.text_alliance_name.Text = corp.AllianceName;
 
             // TODO: Retrieve Journal Tax data
-            EveApiResponse<WalletJournal> wallet = corp.GetWalletJournal(1000, 500, 0);
-            DateTime startDate = new DateTime(2014,7,1);
-            List<WalletJournal.JournalEntry> filteredJournals = new List<WalletJournal.JournalEntry>();
+            DateTime start = new DateTime(2014, 7, 1);
+            DateTime stop = DateTime.Now;
 
-            for(int i=0; i < wallet.Result.Journal.Count(); i++)
-            {
-                WalletJournal.JournalEntry jEntry = wallet.Result.Journal[i];
-                
-                if (jEntry.RefTypeId != 85)
-                    continue;
-
-                if (jEntry.Date < startDate)
-                    continue;
-                filteredJournals.Add(wallet.Result.Journal[i]);
-
-            }
-
-            var taxTotal = filteredJournals.Select(x => x.Amount).Sum();
-            var taxUser = filteredJournals.Select(x => x.ParticipantName).Distinct();
+            CorpHelper corpHelper = new CorpHelper(corp);
+            Dictionary<string,decimal> tDate = corpHelper.GetCorporationTaxInformation(start, stop);
 
 
         }
