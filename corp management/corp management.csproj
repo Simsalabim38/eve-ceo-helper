@@ -110,6 +110,7 @@
     <Compile Include="Controls\CorpDetails.Designer.cs">
       <DependentUpon>CorpDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="Helper\CorpHelper.cs" />
     <Compile Include="Helper\KeyHelper.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
