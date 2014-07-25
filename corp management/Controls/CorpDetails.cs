@@ -34,14 +34,35 @@ namespace corp_management.Helper
 
             this.text_corp_name.Text = corp.CorporationName;
             this.text_alliance_name.Text = corp.AllianceName;
+            
+            // Retrieves more detail corp details.
+            corp.EnableCacheLoad = false;
+            corp.EnableCacheStore = false;
+            
+            var test = corp.GetCorporationSheet();
+            var test2 = corp.GetStarbaseList();
+            var test3 = corp.GetStarbaseDetails(1015149294913);
+
 
             // TODO: Retrieve Journal Tax data
             DateTime start = new DateTime(2014, 7, 1);
             DateTime stop = DateTime.Now;
 
             CorpHelper corpHelper = new CorpHelper(corp);
-            Dictionary<string,decimal> tDate = corpHelper.GetCorporationTaxInformation(start, stop);
+            Dictionary<string,decimal> tData = corpHelper.GetCorporationTaxInformation(start, stop);
+            
+            ListBox lBox = new ListBox();
+            lBox.Location = new Point(10, 60);
+            lBox.Size = new Size(500, 400);
 
+            int posYIncrementor = 10;
+            foreach(KeyValuePair<string,decimal> dicEntry in tData)
+            {
+                posYIncrementor += 20;
+                string entry = dicEntry.Key + "   " + dicEntry.Value.ToString();
+                lBox.Items.Add(entry);
+            }
+            this.Controls.Add(lBox);
 
         }
     }

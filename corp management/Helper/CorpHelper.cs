@@ -42,18 +42,20 @@ namespace corp_management.Helper
         /// <returns>Dictionary with User name and summarized tax amount</returns>
         public Dictionary<string,decimal> GetCorporationTaxInformation(DateTime startDate, DateTime stopDate)
         {
-            
             Dictionary<string,decimal> _taxData = new Dictionary<string,decimal>();
 
-            EveApiResponse<WalletJournal> wallet = _corp.GetWalletJournal(1000, 500, 0);
+            EveApiResponse<WalletJournal> wallet = _corp.GetWalletJournal(1000, 5000, 0);
             List<WalletJournal.JournalEntry> filteredJournals = new List<WalletJournal.JournalEntry>();
-
+            List<int> _validRefTypes = new List<int>() { 17, 85 };
             for (int i = 0; i < wallet.Result.Journal.Count(); i++)
             {
                 WalletJournal.JournalEntry jEntry = wallet.Result.Journal[i];
 
-                if (jEntry.RefTypeId != 85)
+                if(!_validRefTypes.Contains(jEntry.RefTypeId))
                     continue;
+
+                //if (jEntry.RefTypeId != 85 || jEntry.RefTypeId != 17)
+                //    continue;
 
                 if (jEntry.Date < startDate)
                     continue;
@@ -66,7 +68,6 @@ namespace corp_management.Helper
             }
 
             var taxTotal = filteredJournals.Select(x => x.Amount).Sum();
-
             var taxUser = filteredJournals.Select(x => x.ParticipantName).Distinct();
 
             // Loop through the list of users and fetch the summary of all Journal entries for each user
