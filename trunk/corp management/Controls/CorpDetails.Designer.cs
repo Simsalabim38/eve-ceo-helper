@@ -48,22 +48,23 @@
             this.text_corp_name.AutoSize = true;
             this.text_corp_name.Location = new System.Drawing.Point(114, 17);
             this.text_corp_name.Name = "text_corp_name";
-            this.text_corp_name.Size = new System.Drawing.Size(0, 13);
+            this.text_corp_name.Size = new System.Drawing.Size(35, 13);
             this.text_corp_name.TabIndex = 1;
+            this.text_corp_name.Text = "label0";
             // 
             // AlianceName_Label
             // 
             this.AlianceName_Label.AutoSize = true;
-            this.AlianceName_Label.Location = new System.Drawing.Point(16, 34);
+            this.AlianceName_Label.Location = new System.Drawing.Point(13, 34);
             this.AlianceName_Label.Name = "AlianceName_Label";
-            this.AlianceName_Label.Size = new System.Drawing.Size(44, 13);
+            this.AlianceName_Label.Size = new System.Drawing.Size(47, 13);
             this.AlianceName_Label.TabIndex = 2;
-            this.AlianceName_Label.Text = "Alliance";
+            this.AlianceName_Label.Text = "Alliance:";
             // 
             // text_alliance_name
             // 
             this.text_alliance_name.AutoSize = true;
-            this.text_alliance_name.Location = new System.Drawing.Point(105, 34);
+            this.text_alliance_name.Location = new System.Drawing.Point(114, 34);
             this.text_alliance_name.Name = "text_alliance_name";
             this.text_alliance_name.Size = new System.Drawing.Size(35, 13);
             this.text_alliance_name.TabIndex = 3;

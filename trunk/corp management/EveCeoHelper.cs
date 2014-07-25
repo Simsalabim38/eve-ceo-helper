@@ -51,8 +51,8 @@ namespace corp_management
                 cDetails.Location = new Point(10, 10);
                 this.tabPage1.Controls.Add(cDetails);
             }
-            
-            
+
+
         }
 
         private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
