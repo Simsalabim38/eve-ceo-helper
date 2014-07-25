@@ -69,5 +69,20 @@ namespace corp_management
         {
 
         }
+
+        private void tabPage8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage15_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tabPage13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

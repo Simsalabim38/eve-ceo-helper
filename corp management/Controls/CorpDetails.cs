@@ -39,9 +39,9 @@ namespace corp_management.Helper
             corp.EnableCacheLoad = false;
             corp.EnableCacheStore = false;
             
-            var test = corp.GetCorporationSheet();
-            var test2 = corp.GetStarbaseList();
-            var test3 = corp.GetStarbaseDetails(1015149294913);
+            //var test = corp.GetCorporationSheet();
+           // var test2 = corp.GetStarbaseList();
+            //var test3 = corp.GetStarbaseDetails(1015149294913);
 
 
             // TODO: Retrieve Journal Tax data
