@@ -45,25 +45,25 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.label3 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage16 = new System.Windows.Forms.TabPage();
             this.tabPage6 = new System.Windows.Forms.TabPage();
             this.tabControl4 = new System.Windows.Forms.TabControl();
             this.tabPage11 = new System.Windows.Forms.TabPage();
             this.tabPage12 = new System.Windows.Forms.TabPage();
+            this.tabPage17 = new System.Windows.Forms.TabPage();
+            this.button4 = new System.Windows.Forms.Button();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.tabPage17 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -75,8 +75,8 @@
             this.tabPage15.SuspendLayout();
             this.tabPage6.SuspendLayout();
             this.tabControl4.SuspendLayout();
-            this.tabPage14.SuspendLayout();
             this.tabPage17.SuspendLayout();
+            this.tabPage14.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -103,6 +103,7 @@
             this.tabPage13.TabIndex = 5;
             this.tabPage13.Text = "Main Page";
             this.tabPage13.UseVisualStyleBackColor = true;
+            this.tabPage13.Click += new System.EventHandler(this.tabPage13_Click);
             // 
             // tabPage1
             // 
@@ -216,6 +217,7 @@
             this.tabPage8.TabIndex = 0;
             this.tabPage8.Text = "Master Wallet";
             this.tabPage8.UseVisualStyleBackColor = true;
+            this.tabPage8.Click += new System.EventHandler(this.tabPage8_Click);
             // 
             // tabPage9
             // 
@@ -247,6 +249,24 @@
             this.tabPage15.TabIndex = 3;
             this.tabPage15.Text = "Tax Conrtibutors";
             this.tabPage15.UseVisualStyleBackColor = true;
+            this.tabPage15.Click += new System.EventHandler(this.tabPage15_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(187, 30);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(41, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "System";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(266, 27);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(164, 21);
+            this.comboBox1.TabIndex = 0;
             // 
             // tabPage16
             // 
@@ -299,6 +319,69 @@
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "Completed Jobs";
             this.tabPage12.UseVisualStyleBackColor = true;
+            // 
+            // tabPage17
+            // 
+            this.tabPage17.Controls.Add(this.button4);
+            this.tabPage17.Controls.Add(this.textBox3);
+            this.tabPage17.Controls.Add(this.button3);
+            this.tabPage17.Controls.Add(this.button2);
+            this.tabPage17.Controls.Add(this.button1);
+            this.tabPage17.Location = new System.Drawing.Point(4, 22);
+            this.tabPage17.Name = "tabPage17";
+            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage17.Size = new System.Drawing.Size(1135, 567);
+            this.tabPage17.TabIndex = 2;
+            this.tabPage17.Text = "Blue Prints";
+            this.tabPage17.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(217, 11);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(78, 24);
+            this.button4.TabIndex = 4;
+            this.button4.Text = "Searh";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(6, 15);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(205, 20);
+            this.textBox3.TabIndex = 3;
+            // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Location = new System.Drawing.Point(518, 11);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(78, 25);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "All";
+            this.button3.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
+            this.button2.Location = new System.Drawing.Point(434, 11);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(78, 24);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Copies";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Blue;
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(350, 11);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(78, 25);
+            this.button1.TabIndex = 0;
+            this.button1.Text = "Originals";
+            this.button1.UseVisualStyleBackColor = false;
             // 
             // tabPage7
             // 
@@ -370,86 +453,6 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // tabPage17
-            // 
-            this.tabPage17.Controls.Add(this.button4);
-            this.tabPage17.Controls.Add(this.textBox3);
-            this.tabPage17.Controls.Add(this.button3);
-            this.tabPage17.Controls.Add(this.button2);
-            this.tabPage17.Controls.Add(this.button1);
-            this.tabPage17.Location = new System.Drawing.Point(4, 22);
-            this.tabPage17.Name = "tabPage17";
-            this.tabPage17.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage17.Size = new System.Drawing.Size(1135, 567);
-            this.tabPage17.TabIndex = 2;
-            this.tabPage17.Text = "Blue Prints";
-            this.tabPage17.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.Blue;
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(350, 11);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(78, 25);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Originals";
-            this.button1.UseVisualStyleBackColor = false;
-            // 
-            // button2
-            // 
-            this.button2.BackColor = System.Drawing.Color.LightSkyBlue;
-            this.button2.Location = new System.Drawing.Point(434, 11);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(78, 24);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "Copies";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Red;
-            this.button3.Location = new System.Drawing.Point(518, 11);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(78, 25);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "All";
-            this.button3.UseVisualStyleBackColor = false;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(6, 15);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(205, 20);
-            this.textBox3.TabIndex = 3;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(217, 11);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(78, 24);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Searh";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(266, 27);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(164, 21);
-            this.comboBox1.TabIndex = 0;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(187, 30);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(41, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "System";
-            // 
             // EveCeoHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -472,10 +475,10 @@
             this.tabPage15.PerformLayout();
             this.tabPage6.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
-            this.tabPage14.ResumeLayout(false);
-            this.tabPage14.PerformLayout();
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
+            this.tabPage14.ResumeLayout(false);
+            this.tabPage14.PerformLayout();
             this.ResumeLayout(false);
 
         }
