@@ -34,10 +34,6 @@ namespace corp_management.Helper
 
             this.text_corp_name.Text = corp.CorporationName;
             this.text_alliance_name.Text = corp.AllianceName;
-            
-            // Retrieves more detail corp details.
-            corp.EnableCacheLoad = false;
-            corp.EnableCacheStore = false;
 
         }
     }
