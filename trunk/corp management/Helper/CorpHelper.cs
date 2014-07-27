@@ -46,7 +46,7 @@ namespace corp_management.Helper
 
             EveApiResponse<WalletJournal> wallet = _corp.GetWalletJournal(1000, 5000, 0);
             List<WalletJournal.JournalEntry> filteredJournals = new List<WalletJournal.JournalEntry>();
-            List<int> _validRefTypes = new List<int>() { 17, 85 };
+            List<int> _validRefTypes = new List<int>() { 17, 85, 33, 34, 93, 94, 96, 97 };
             for (int i = 0; i < wallet.Result.Journal.Count(); i++)
             {
                 WalletJournal.JournalEntry jEntry = wallet.Result.Journal[i];
