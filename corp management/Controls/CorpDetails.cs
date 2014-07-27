@@ -40,7 +40,7 @@ namespace corp_management.Helper
             corp.EnableCacheStore = false;
             
             //var test = corp.GetCorporationSheet();
-           // var test2 = corp.GetStarbaseList();
+            //var test2 = corp.GetStarbaseList();
             //var test3 = corp.GetStarbaseDetails(1015149294913);
 
 
@@ -50,16 +50,19 @@ namespace corp_management.Helper
 
             CorpHelper corpHelper = new CorpHelper(corp);
             Dictionary<string,decimal> tData = corpHelper.GetCorporationTaxInformation(start, stop);
-            
+            tData = tData.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+
             ListBox lBox = new ListBox();
             lBox.Location = new Point(10, 60);
             lBox.Size = new Size(500, 400);
 
             int posYIncrementor = 10;
-            foreach(KeyValuePair<string,decimal> dicEntry in tData)
-            {
+            for (int i = 0; i < tData.Count(); i++)
+            { 
+                KeyValuePair<string, decimal> dicEntry = tData.ElementAt(i);
+                
                 posYIncrementor += 20;
-                string entry = dicEntry.Key + "   " + dicEntry.Value.ToString();
+                string entry = i.ToString() + " " +  dicEntry.Key + "   " + dicEntry.Value.ToString();
                 lBox.Items.Add(entry);
             }
             this.Controls.Add(lBox);
