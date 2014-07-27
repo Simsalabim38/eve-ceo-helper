@@ -3,6 +3,7 @@ using eZet.EveLib.Modules.Models.Character;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -40,8 +41,12 @@ namespace corp_management.Helper
         /// <param name="startDate">Start date</param>
         /// <param name="stopDate">End date</param>
         /// <returns>Dictionary with User name and summarized tax amount</returns>
-        public Dictionary<string,decimal> GetCorporationTaxInformation(DateTime startDate, DateTime stopDate)
+        public DataTable GetCorporationTaxInformation(DateTime startDate, DateTime stopDate)
         {
+            DataTable dt = new DataTable("CorpTaxData");
+            dt.Columns.Add("Name");
+            dt.Columns.Add("Isk", typeof(decimal));
+
             Dictionary<string,decimal> _taxData = new Dictionary<string,decimal>();
 
             EveApiResponse<WalletJournal> wallet = _corp.GetWalletJournal(1000, 5000, 0);
@@ -53,9 +58,6 @@ namespace corp_management.Helper
 
                 if(!_validRefTypes.Contains(jEntry.RefTypeId))
                     continue;
-
-                //if (jEntry.RefTypeId != 85 || jEntry.RefTypeId != 17)
-                //    continue;
 
                 if (jEntry.Date < startDate)
                     continue;
@@ -79,12 +81,17 @@ namespace corp_management.Helper
                                     x.Amount > 0)
                                 ).Select(x => x.Amount).Sum()
                             );
+                dt.Rows.Add(user, (filteredJournals.Where(
+                                    x => x.ParticipantName == user &&
+                                    x.Amount > 0)
+                                ).Select(x => x.Amount).Sum());  
             }
 
             // Add "Total sum" to the Dictionary
             _taxData.Add("Total", taxTotal);
-
-            return _taxData;
+            dt.Rows.Add("Total", taxTotal);
+            
+            return dt;
         }
     }
 }
