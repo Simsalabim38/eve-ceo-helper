@@ -38,34 +38,6 @@ namespace corp_management.Helper
             // Retrieves more detail corp details.
             corp.EnableCacheLoad = false;
             corp.EnableCacheStore = false;
-            
-            //var test = corp.GetCorporationSheet();
-            //var test2 = corp.GetStarbaseList();
-            //var test3 = corp.GetStarbaseDetails(1015149294913);
-
-
-            // TODO: Retrieve Journal Tax data
-            DateTime start = new DateTime(2014, 7, 1);
-            DateTime stop = DateTime.Now;
-
-            CorpHelper corpHelper = new CorpHelper(corp);
-            Dictionary<string,decimal> tData = corpHelper.GetCorporationTaxInformation(start, stop);
-            tData = tData.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-
-            ListBox lBox = new ListBox();
-            lBox.Location = new Point(10, 60);
-            lBox.Size = new Size(500, 400);
-
-            int posYIncrementor = 10;
-            for (int i = 0; i < tData.Count(); i++)
-            { 
-                KeyValuePair<string, decimal> dicEntry = tData.ElementAt(i);
-                
-                posYIncrementor += 20;
-                string entry = i.ToString() + " " +  dicEntry.Key + "   " + dicEntry.Value.ToString();
-                lBox.Items.Add(entry);
-            }
-            this.Controls.Add(lBox);
 
         }
     }

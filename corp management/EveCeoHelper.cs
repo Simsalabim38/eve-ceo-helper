@@ -22,6 +22,9 @@ namespace corp_management
             InitializeComponent();
         }
 
+
+        public Corporation currentCorp { get; set; }
+
         private void Form2_Load(object sender, EventArgs e)
         {
             string key = "";
@@ -44,6 +47,7 @@ namespace corp_management
             {
                 CorporationKey cKey = (CorporationKey)apiKey.GetActualKey();
                 Corporation corp = cKey.Corporation;
+                currentCorp = corp;
 
                 // Retrieve corp details and fill Corp-Details tab with the control
                 CorpDetails cDetails = new CorpDetails(corp);
@@ -52,6 +56,20 @@ namespace corp_management
                 this.tabPage1.Controls.Add(cDetails);
             }
 
+            // TODO: Retrieve Journal Tax data
+            DateTime start = new DateTime(2014, 7, 1);
+            DateTime stop = DateTime.Now;
+
+            CorpHelper corpHelper = new CorpHelper(currentCorp);
+            
+            //corpHelper.GetCorporationTaxInformation(start, stop);
+            //tData = tData.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
+            
+            //var _priceDataArray = from row in tData select new { Item = row.Key, Price = row.Value };
+            dataGridView1.DataSource = corpHelper.GetCorporationTaxInformation(start, stop);
+            
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
+            dataGridView1.Rows[dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Visible)].DefaultCellStyle.BackColor = Color.Red;
 
         }
 
@@ -77,7 +95,7 @@ namespace corp_management
 
         private void tabPage15_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void tabPage13_Click(object sender, EventArgs e)
