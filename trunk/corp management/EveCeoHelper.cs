@@ -69,7 +69,7 @@ namespace corp_management
             dataGridView1.DataSource = corpHelper.GetCorporationTaxInformation(start, stop);
             
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
-            dataGridView1.Rows[dataGridView1.Rows.GetRowCount(DataGridViewElementStates.Visible)].DefaultCellStyle.BackColor = Color.Red;
+           
 
         }
 
