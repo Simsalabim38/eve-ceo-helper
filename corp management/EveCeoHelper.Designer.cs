@@ -46,6 +46,11 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TaxContrDatePickerStop = new System.Windows.Forms.DateTimePicker();
+            this.TaxContrDatePickerStart = new System.Windows.Forms.DateTimePicker();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label3 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage16 = new System.Windows.Forms.TabPage();
@@ -65,11 +70,9 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
+            this.ReloadTaxData = new System.Windows.Forms.Button();
+            this.Label_TotalTaxContribution = new System.Windows.Forms.Label();
+            this.TaxContributionTotalText = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -79,11 +82,11 @@
             this.tabPage5.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage15.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage17.SuspendLayout();
             this.tabPage14.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -247,10 +250,13 @@
             // 
             // tabPage15
             // 
+            this.tabPage15.Controls.Add(this.TaxContributionTotalText);
+            this.tabPage15.Controls.Add(this.Label_TotalTaxContribution);
+            this.tabPage15.Controls.Add(this.ReloadTaxData);
             this.tabPage15.Controls.Add(this.label5);
             this.tabPage15.Controls.Add(this.label4);
-            this.tabPage15.Controls.Add(this.dateTimePicker2);
-            this.tabPage15.Controls.Add(this.dateTimePicker1);
+            this.tabPage15.Controls.Add(this.TaxContrDatePickerStop);
+            this.tabPage15.Controls.Add(this.TaxContrDatePickerStart);
             this.tabPage15.Controls.Add(this.dataGridView1);
             this.tabPage15.Controls.Add(this.label3);
             this.tabPage15.Controls.Add(this.comboBox1);
@@ -262,6 +268,58 @@
             this.tabPage15.Text = "Tax Conrtibutors";
             this.tabPage15.UseVisualStyleBackColor = true;
             this.tabPage15.Click += new System.EventHandler(this.tabPage15_Click);
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(270, 77);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(27, 15);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "To: ";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(100, 77);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(42, 15);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "From: ";
+            // 
+            // TaxContrDatePickerStop
+            // 
+            this.TaxContrDatePickerStop.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TaxContrDatePickerStop.Location = new System.Drawing.Point(305, 76);
+            this.TaxContrDatePickerStop.Name = "TaxContrDatePickerStop";
+            this.TaxContrDatePickerStop.Size = new System.Drawing.Size(107, 20);
+            this.TaxContrDatePickerStop.TabIndex = 3;
+            // 
+            // TaxContrDatePickerStart
+            // 
+            this.TaxContrDatePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.TaxContrDatePickerStart.Location = new System.Drawing.Point(148, 76);
+            this.TaxContrDatePickerStart.Name = "TaxContrDatePickerStart";
+            this.TaxContrDatePickerStart.Size = new System.Drawing.Size(107, 20);
+            this.TaxContrDatePickerStart.TabIndex = 3;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToOrderColumns = true;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(18, 127);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.Size = new System.Drawing.Size(584, 382);
+            this.dataGridView1.TabIndex = 2;
             // 
             // label3
             // 
@@ -465,57 +523,33 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
-            // dataGridView1
+            // ReloadTaxData
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(18, 127);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(584, 420);
-            this.dataGridView1.TabIndex = 2;
+            this.ReloadTaxData.Location = new System.Drawing.Point(429, 76);
+            this.ReloadTaxData.Name = "ReloadTaxData";
+            this.ReloadTaxData.Size = new System.Drawing.Size(75, 23);
+            this.ReloadTaxData.TabIndex = 5;
+            this.ReloadTaxData.Text = "Update";
+            this.ReloadTaxData.UseVisualStyleBackColor = true;
+            this.ReloadTaxData.Click += new System.EventHandler(this.ReloadTaxData_Click);
             // 
-            // dateTimePicker1
+            // Label_TotalTaxContribution
             // 
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(190, 76);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(107, 20);
-            this.dateTimePicker1.TabIndex = 3;
+            this.Label_TotalTaxContribution.AutoSize = true;
+            this.Label_TotalTaxContribution.Location = new System.Drawing.Point(18, 525);
+            this.Label_TotalTaxContribution.Name = "Label_TotalTaxContribution";
+            this.Label_TotalTaxContribution.Size = new System.Drawing.Size(112, 13);
+            this.Label_TotalTaxContribution.TabIndex = 6;
+            this.Label_TotalTaxContribution.Text = "Tax contribution total: ";
             // 
-            // label4
+            // TaxContributionTotalText
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(148, 76);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(42, 15);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "From: ";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(314, 76);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(27, 15);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "To: ";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(347, 76);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(107, 20);
-            this.dateTimePicker2.TabIndex = 3;
+            this.TaxContributionTotalText.AutoSize = true;
+            this.TaxContributionTotalText.Location = new System.Drawing.Point(126, 525);
+            this.TaxContributionTotalText.Name = "TaxContributionTotalText";
+            this.TaxContributionTotalText.Size = new System.Drawing.Size(35, 13);
+            this.TaxContributionTotalText.TabIndex = 7;
+            this.TaxContributionTotalText.Text = "label6";
             // 
             // EveCeoHelper
             // 
@@ -537,13 +571,13 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -588,7 +622,10 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker TaxContrDatePickerStop;
+        private System.Windows.Forms.DateTimePicker TaxContrDatePickerStart;
+        private System.Windows.Forms.Label TaxContributionTotalText;
+        private System.Windows.Forms.Label Label_TotalTaxContribution;
+        private System.Windows.Forms.Button ReloadTaxData;
     }
 }
