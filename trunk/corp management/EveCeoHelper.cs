@@ -57,17 +57,17 @@ namespace corp_management
             }
 
             // TODO: Retrieve Journal Tax data
-            DateTime start = new DateTime(2014, 7, 1);
+            DateTime todayDate = DateTime.Now;
+            DateTime start = new DateTime(todayDate.Year, todayDate.Month, 1);
             DateTime stop = DateTime.Now;
 
             CorpHelper corpHelper = new CorpHelper(currentCorp);
-            
-            //corpHelper.GetCorporationTaxInformation(start, stop);
-            //tData = tData.OrderByDescending(x => x.Value).ToDictionary(x => x.Key, x => x.Value);
-            
-            //var _priceDataArray = from row in tData select new { Item = row.Key, Price = row.Value };
-            dataGridView1.DataSource = corpHelper.GetCorporationTaxInformation(start, stop);
-            
+            DataTable dt = corpHelper.GetCorporationTaxInformation(start, stop);
+            // Fill Total tax Label
+            TaxContributionTotalText.Text = dt.Rows[dt.Rows.Count - 1].ItemArray[1].ToString() + " ISK";
+            dt.Rows[dt.Rows.Count - 1].Delete();
+
+            dataGridView1.DataSource = dt;
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
            
 
@@ -101,6 +101,24 @@ namespace corp_management
         private void tabPage13_Click(object sender, EventArgs e)
         {
 
+        }
+
+        /// <summary>
+        /// Update the tax contribution grid by Start and Stop Date from Datepicker
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ReloadTaxData_Click(object sender, EventArgs e)
+        {
+            CorpHelper corpHelper = new CorpHelper(currentCorp);
+
+            DataTable dt = corpHelper.GetCorporationTaxInformation(TaxContrDatePickerStart.Value, TaxContrDatePickerStop.Value);
+            // Fill Total tax Label
+            TaxContributionTotalText.Text = dt.Rows[dt.Rows.Count - 1].ItemArray[1].ToString() + " ISK";
+            dt.Rows[dt.Rows.Count - 1].Delete();
+
+            dataGridView1.DataSource = dt;
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
         }
     }
 }
