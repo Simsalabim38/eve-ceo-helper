@@ -46,6 +46,9 @@
             this.tabPage9 = new System.Windows.Forms.TabPage();
             this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
+            this.TaxContributionTotalText = new System.Windows.Forms.Label();
+            this.Label_TotalTaxContribution = new System.Windows.Forms.Label();
+            this.ReloadTaxData = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.TaxContrDatePickerStop = new System.Windows.Forms.DateTimePicker();
@@ -70,9 +73,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ReloadTaxData = new System.Windows.Forms.Button();
-            this.Label_TotalTaxContribution = new System.Windows.Forms.Label();
-            this.TaxContributionTotalText = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -106,6 +106,8 @@
             // 
             // tabPage13
             // 
+            this.tabPage13.BackgroundImage = global::corp_management.Properties.Resources.EVEOnlineLogo;
+            this.tabPage13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
             this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
@@ -268,6 +270,34 @@
             this.tabPage15.Text = "Tax Conrtibutors";
             this.tabPage15.UseVisualStyleBackColor = true;
             this.tabPage15.Click += new System.EventHandler(this.tabPage15_Click);
+            // 
+            // TaxContributionTotalText
+            // 
+            this.TaxContributionTotalText.AutoSize = true;
+            this.TaxContributionTotalText.Location = new System.Drawing.Point(126, 525);
+            this.TaxContributionTotalText.Name = "TaxContributionTotalText";
+            this.TaxContributionTotalText.Size = new System.Drawing.Size(35, 13);
+            this.TaxContributionTotalText.TabIndex = 7;
+            this.TaxContributionTotalText.Text = "label6";
+            // 
+            // Label_TotalTaxContribution
+            // 
+            this.Label_TotalTaxContribution.AutoSize = true;
+            this.Label_TotalTaxContribution.Location = new System.Drawing.Point(18, 525);
+            this.Label_TotalTaxContribution.Name = "Label_TotalTaxContribution";
+            this.Label_TotalTaxContribution.Size = new System.Drawing.Size(112, 13);
+            this.Label_TotalTaxContribution.TabIndex = 6;
+            this.Label_TotalTaxContribution.Text = "Tax contribution total: ";
+            // 
+            // ReloadTaxData
+            // 
+            this.ReloadTaxData.Location = new System.Drawing.Point(429, 76);
+            this.ReloadTaxData.Name = "ReloadTaxData";
+            this.ReloadTaxData.Size = new System.Drawing.Size(75, 23);
+            this.ReloadTaxData.TabIndex = 5;
+            this.ReloadTaxData.Text = "Update";
+            this.ReloadTaxData.UseVisualStyleBackColor = true;
+            this.ReloadTaxData.Click += new System.EventHandler(this.ReloadTaxData_Click);
             // 
             // label5
             // 
@@ -522,34 +552,6 @@
             this.label1.Text = "Alliance";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // ReloadTaxData
-            // 
-            this.ReloadTaxData.Location = new System.Drawing.Point(429, 76);
-            this.ReloadTaxData.Name = "ReloadTaxData";
-            this.ReloadTaxData.Size = new System.Drawing.Size(75, 23);
-            this.ReloadTaxData.TabIndex = 5;
-            this.ReloadTaxData.Text = "Update";
-            this.ReloadTaxData.UseVisualStyleBackColor = true;
-            this.ReloadTaxData.Click += new System.EventHandler(this.ReloadTaxData_Click);
-            // 
-            // Label_TotalTaxContribution
-            // 
-            this.Label_TotalTaxContribution.AutoSize = true;
-            this.Label_TotalTaxContribution.Location = new System.Drawing.Point(18, 525);
-            this.Label_TotalTaxContribution.Name = "Label_TotalTaxContribution";
-            this.Label_TotalTaxContribution.Size = new System.Drawing.Size(112, 13);
-            this.Label_TotalTaxContribution.TabIndex = 6;
-            this.Label_TotalTaxContribution.Text = "Tax contribution total: ";
-            // 
-            // TaxContributionTotalText
-            // 
-            this.TaxContributionTotalText.AutoSize = true;
-            this.TaxContributionTotalText.Location = new System.Drawing.Point(126, 525);
-            this.TaxContributionTotalText.Name = "TaxContributionTotalText";
-            this.TaxContributionTotalText.Size = new System.Drawing.Size(35, 13);
-            this.TaxContributionTotalText.TabIndex = 7;
-            this.TaxContributionTotalText.Text = "label6";
             // 
             // EveCeoHelper
             // 
