@@ -73,6 +73,13 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.tabPage20 = new System.Windows.Forms.TabPage();
+            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser3 = new System.Windows.Forms.WebBrowser();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -87,6 +94,10 @@
             this.tabControl4.SuspendLayout();
             this.tabPage17.SuspendLayout();
             this.tabPage14.SuspendLayout();
+            this.tabPage18.SuspendLayout();
+            this.tabControl5.SuspendLayout();
+            this.tabPage19.SuspendLayout();
+            this.tabPage20.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -98,6 +109,7 @@
             this.tabControl1.Controls.Add(this.tabPage6);
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage14);
+            this.tabControl1.Controls.Add(this.tabPage18);
             this.tabControl1.Location = new System.Drawing.Point(1, 1);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -553,6 +565,83 @@
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
+            // tabPage18
+            // 
+            this.tabPage18.Controls.Add(this.tabControl5);
+            this.tabPage18.Controls.Add(this.webBrowser1);
+            this.tabPage18.Location = new System.Drawing.Point(4, 22);
+            this.tabPage18.Name = "tabPage18";
+            this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage18.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage18.TabIndex = 7;
+            this.tabPage18.Text = "Spreadsheets";
+            this.tabPage18.UseVisualStyleBackColor = true;
+            this.tabPage18.Click += new System.EventHandler(this.tabPage18_Click);
+            // 
+            // webBrowser1
+            // 
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1140, 589);
+            this.webBrowser1.TabIndex = 0;
+            // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage19);
+            this.tabControl5.Controls.Add(this.tabPage20);
+            this.tabControl5.Location = new System.Drawing.Point(-4, 3);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(1154, 641);
+            this.tabControl5.TabIndex = 1;
+            // 
+            // tabPage19
+            // 
+            this.tabPage19.Controls.Add(this.webBrowser3);
+            this.tabPage19.Location = new System.Drawing.Point(4, 22);
+            this.tabPage19.Name = "tabPage19";
+            this.tabPage19.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage19.Size = new System.Drawing.Size(1146, 615);
+            this.tabPage19.TabIndex = 0;
+            this.tabPage19.Text = "Ore Refine Stats";
+            this.tabPage19.UseVisualStyleBackColor = true;
+            this.tabPage19.Click += new System.EventHandler(this.tabPage19_Click);
+            // 
+            // tabPage20
+            // 
+            this.tabPage20.Controls.Add(this.webBrowser2);
+            this.tabPage20.Location = new System.Drawing.Point(4, 22);
+            this.tabPage20.Name = "tabPage20";
+            this.tabPage20.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage20.Size = new System.Drawing.Size(1146, 615);
+            this.tabPage20.TabIndex = 1;
+            this.tabPage20.Text = "Ore Buy Back";
+            this.tabPage20.UseVisualStyleBackColor = true;
+            // 
+            // webBrowser2
+            // 
+            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser2.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser2.Name = "webBrowser2";
+            this.webBrowser2.Size = new System.Drawing.Size(1140, 609);
+            this.webBrowser2.TabIndex = 0;
+            this.webBrowser2.Url = new System.Uri("https://docs.google.com/spreadsheet/ccc?key=0Ar6ucGZzRSAsdEE4TnJmQ0p4NXJfYmk2RFdn" +
+        "cFFXNFE&usp=drive_web#gid=0", System.UriKind.Absolute);
+            // 
+            // webBrowser3
+            // 
+            this.webBrowser3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser3.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser3.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser3.Name = "webBrowser3";
+            this.webBrowser3.Size = new System.Drawing.Size(1140, 609);
+            this.webBrowser3.TabIndex = 0;
+            this.webBrowser3.Url = new System.Uri("https://docs.google.com/spreadsheets/d/1ItRQcPk4LcsPLOUxmRJwejdXuLRd5Pao6rxXRFVKv" +
+        "hM/edit#gid=1264080518", System.UriKind.Absolute);
+            // 
             // EveCeoHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -580,6 +669,10 @@
             this.tabPage17.PerformLayout();
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
+            this.tabPage18.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
+            this.tabPage19.ResumeLayout(false);
+            this.tabPage20.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -629,5 +722,12 @@
         private System.Windows.Forms.Label TaxContributionTotalText;
         private System.Windows.Forms.Label Label_TotalTaxContribution;
         private System.Windows.Forms.Button ReloadTaxData;
+        private System.Windows.Forms.TabPage tabPage18;
+        private System.Windows.Forms.WebBrowser webBrowser1;
+        private System.Windows.Forms.TabControl tabControl5;
+        private System.Windows.Forms.TabPage tabPage19;
+        private System.Windows.Forms.TabPage tabPage20;
+        private System.Windows.Forms.WebBrowser webBrowser2;
+        private System.Windows.Forms.WebBrowser webBrowser3;
     }
 }
