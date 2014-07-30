@@ -120,5 +120,15 @@ namespace corp_management
             dataGridView1.DataSource = dt;
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
         }
+
+        private void tabPage18_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void tabPage19_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
