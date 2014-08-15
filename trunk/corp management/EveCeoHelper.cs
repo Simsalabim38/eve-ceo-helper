@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -38,6 +39,12 @@ namespace corp_management
                 this.Close();
 
             verifCode = f.Vcode;
+            if(String.IsNullOrEmpty(verifCode))
+            {
+                MessageBox.Show("Verification code cannot be null or empty, please try again...");
+                return;
+            }
+
             ApiKey apiKey = EveOnlineApi.CreateApiKey(keyInt,verifCode);
             if (!apiKey.IsInitialized && apiKey.IsValidKey())
                 apiKey.Init();
@@ -55,21 +62,34 @@ namespace corp_management
                 cDetails.Location = new Point(10, 10);
                 this.tabPage1.Controls.Add(cDetails);
             }
+            else
+            {
+                MessageBox.Show("Currently we support only Corporation api keys, sorry!");
+                return;
+                // Handle Private API Key
+            }
 
-            // TODO: Retrieve Journal Tax data
             DateTime todayDate = DateTime.Now;
-            DateTime start = new DateTime(todayDate.Year, todayDate.Month, 1);
+            DateTime start = new DateTime(todayDate.Year, todayDate.Month, 1, 0, 0, 1);
             DateTime stop = DateTime.Now;
+
+            TaxContrDatePickerStart.Value = start;
+            TaxContrDatePickerStop.Value = stop;
 
             CorpHelper corpHelper = new CorpHelper(currentCorp);
             DataTable dt = corpHelper.GetCorporationTaxInformation(start, stop);
             // Fill Total tax Label
-            TaxContributionTotalText.Text = dt.Rows[dt.Rows.Count - 1].ItemArray[1].ToString() + " ISK";
+            TaxContributionTotalText.Text = Decimal.ToOACurrency((decimal)dt.Rows[dt.Rows.Count - 1].ItemArray[1]) + " ISK";
             dt.Rows[dt.Rows.Count - 1].Delete();
 
             dataGridView1.DataSource = dt;
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
-           
+            
+
+            //System.IO.BinaryReader br = new BinaryReader();
+            //System.Drawing.Image.FromStream();
+
+            pictureBox1.Load(corpHelper.GetCorpImage());
 
         }
 
@@ -129,6 +149,12 @@ namespace corp_management
         private void tabPage19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void tabControl3_Click(object sender, EventArgs e)
+        {
+            corpWalletTransactions1.Corp = currentCorp;
+            corpWalletTransactions1.LoadDataGrid();
         }
     }
 }
