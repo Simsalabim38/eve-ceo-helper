@@ -4,6 +4,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -44,8 +45,8 @@ namespace corp_management.Helper
         public DataTable GetCorporationTaxInformation(DateTime startDate, DateTime stopDate)
         {
             DataTable dt = new DataTable("CorpTaxData");
-            dt.Columns.Add("Name");
-            dt.Columns.Add("Isk", typeof(decimal));
+            dt.Columns.Add("Name"); // Undefined column
+            dt.Columns.Add("Isk", typeof(decimal)); // Specific type column
 
             Dictionary<string,decimal> _taxData = new Dictionary<string,decimal>();
 
@@ -92,6 +93,45 @@ namespace corp_management.Helper
             dt.Rows.Add("Total", taxTotal);
             
             return dt;
+        }
+
+        public DataTable GetMasterWalletTransactions(DateTime startDate, DateTime stopDate, int pageNumber)
+        {
+            DataTable dt = new DataTable("MasterWalletTrans");
+            int _pNr = 0;
+            if (pageNumber == 0)
+                pageNumber = _pNr;
+
+            EveApiResponse<WalletTransactions> wallet = new EveApiResponse<WalletTransactions>();
+            wallet = _corp.GetWalletTransactions(1000, 5000, _pNr);
+
+
+
+            return dt;
+        }
+
+        public string GetCorpImage()
+        {
+            eZet.EveLib.Modules.Image img = new eZet.EveLib.Modules.Image();
+            string _file = String.Empty;
+
+            if (!File.Exists(Directory.GetCurrentDirectory() + @"\" + _corp.CorporationId.ToString() + "_128.png"))
+            {
+                try
+                {
+                    string _returnValue = img.GetCorporationLogo(_corp.CorporationId, eZet.EveLib.Modules.Image.CorporationLogoSize.X128, Directory.GetCurrentDirectory());
+                    _file = _returnValue;
+                }
+                catch (Exception ex)
+                {
+                    return _file;
+                }
+            }
+            else
+            {
+                _file = Directory.GetCurrentDirectory() + @"\" + _corp.CorporationId.ToString() + "_128.png";
+            }
+            return _file;
         }
     }
 }

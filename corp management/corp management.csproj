@@ -112,6 +112,12 @@
     <Compile Include="ApiKeyInputForm.Designer.cs">
       <DependentUpon>ApiKeyInputForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CorpWalletTransactions.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CorpWalletTransactions.Designer.cs">
+      <DependentUpon>CorpWalletTransactions.cs</DependentUpon>
+    </Compile>
     <Compile Include="EveCeoHelper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ApiKeyInputForm.resx">
       <DependentUpon>ApiKeyInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CorpWalletTransactions.resx">
+      <DependentUpon>CorpWalletTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EveCeoHelper.resx">
       <DependentUpon>EveCeoHelper.cs</DependentUpon>

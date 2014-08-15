@@ -34,6 +34,18 @@ namespace corp_management
 
         public void button1_Click(object sender, EventArgs e)
         {
+            if(String.IsNullOrEmpty(textboxKey.Text))
+            {
+                MessageBox.Show("Key is invalid or empty, please try again...");
+                return;
+            }
+            
+            if(String.IsNullOrEmpty(textBoxVerifCode.Text))
+            {
+                MessageBox.Show("Verification code is invalid or empty, please try again...");
+                return;
+            }
+
             Key = textboxKey.Text.Trim();
             Vcode = textBoxVerifCode.Text.Trim();
 

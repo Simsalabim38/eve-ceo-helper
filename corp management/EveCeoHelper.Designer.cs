@@ -44,7 +44,6 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.TaxContributionTotalText = new System.Windows.Forms.Label();
             this.Label_TotalTaxContribution = new System.Windows.Forms.Label();
@@ -74,12 +73,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage18 = new System.Windows.Forms.TabPage();
-            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
             this.tabControl5 = new System.Windows.Forms.TabControl();
             this.tabPage19 = new System.Windows.Forms.TabPage();
+            this.webBrowser3 = new System.Windows.Forms.WebBrowser();
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
-            this.webBrowser3 = new System.Windows.Forms.WebBrowser();
+            this.webBrowser1 = new System.Windows.Forms.WebBrowser();
+            this.corpWalletTransactions1 = new corp_management.Controls.CorpWalletTransactions();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -88,6 +88,7 @@
             this.tabPage3.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabControl3.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.tabPage15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
@@ -118,7 +119,6 @@
             // 
             // tabPage13
             // 
-            this.tabPage13.BackgroundImage = global::corp_management.Properties.Resources.EVEOnlineLogo;
             this.tabPage13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.tabPage13.Location = new System.Drawing.Point(4, 22);
             this.tabPage13.Name = "tabPage13";
@@ -142,9 +142,11 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(959, 9);
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(936, 24);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(179, 161);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
@@ -223,7 +225,6 @@
             // 
             this.tabControl3.Controls.Add(this.tabPage8);
             this.tabControl3.Controls.Add(this.tabPage9);
-            this.tabControl3.Controls.Add(this.tabPage10);
             this.tabControl3.Controls.Add(this.tabPage15);
             this.tabControl3.Controls.Add(this.tabPage16);
             this.tabControl3.Location = new System.Drawing.Point(0, 5);
@@ -231,6 +232,7 @@
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(1146, 590);
             this.tabControl3.TabIndex = 0;
+            this.tabControl3.Click += new System.EventHandler(this.tabControl3_Click);
             // 
             // tabPage8
             // 
@@ -245,6 +247,7 @@
             // 
             // tabPage9
             // 
+            this.tabPage9.Controls.Add(this.corpWalletTransactions1);
             this.tabPage9.Location = new System.Drawing.Point(4, 22);
             this.tabPage9.Name = "tabPage9";
             this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
@@ -252,15 +255,6 @@
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Journal";
             this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Size = new System.Drawing.Size(1138, 564);
-            this.tabPage10.TabIndex = 2;
-            this.tabPage10.Text = "Transactions";
-            this.tabPage10.UseVisualStyleBackColor = true;
             // 
             // tabPage15
             // 
@@ -325,7 +319,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(100, 77);
+            this.label4.Location = new System.Drawing.Point(66, 76);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(42, 15);
             this.label4.TabIndex = 4;
@@ -341,10 +335,10 @@
             // 
             // TaxContrDatePickerStart
             // 
-            this.TaxContrDatePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.TaxContrDatePickerStart.Location = new System.Drawing.Point(148, 76);
+            this.TaxContrDatePickerStart.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.TaxContrDatePickerStart.Location = new System.Drawing.Point(129, 76);
             this.TaxContrDatePickerStart.Name = "TaxContrDatePickerStart";
-            this.TaxContrDatePickerStart.Size = new System.Drawing.Size(107, 20);
+            this.TaxContrDatePickerStart.Size = new System.Drawing.Size(126, 20);
             this.TaxContrDatePickerStart.TabIndex = 3;
             // 
             // dataGridView1
@@ -578,15 +572,6 @@
             this.tabPage18.UseVisualStyleBackColor = true;
             this.tabPage18.Click += new System.EventHandler(this.tabPage18_Click);
             // 
-            // webBrowser1
-            // 
-            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
-            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1140, 589);
-            this.webBrowser1.TabIndex = 0;
-            // 
             // tabControl5
             // 
             this.tabControl5.Controls.Add(this.tabPage19);
@@ -608,6 +593,17 @@
             this.tabPage19.Text = "Ore Refine Stats";
             this.tabPage19.UseVisualStyleBackColor = true;
             this.tabPage19.Click += new System.EventHandler(this.tabPage19_Click);
+            // 
+            // webBrowser3
+            // 
+            this.webBrowser3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser3.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser3.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser3.Name = "webBrowser3";
+            this.webBrowser3.Size = new System.Drawing.Size(1140, 609);
+            this.webBrowser3.TabIndex = 0;
+            this.webBrowser3.Url = new System.Uri("https://docs.google.com/spreadsheets/d/1ItRQcPk4LcsPLOUxmRJwejdXuLRd5Pao6rxXRFVKv" +
+        "hM/edit#gid=1264080518", System.UriKind.Absolute);
             // 
             // tabPage20
             // 
@@ -631,16 +627,22 @@
             this.webBrowser2.Url = new System.Uri("https://docs.google.com/spreadsheet/ccc?key=0Ar6ucGZzRSAsdEE4TnJmQ0p4NXJfYmk2RFdn" +
         "cFFXNFE&usp=drive_web#gid=0", System.UriKind.Absolute);
             // 
-            // webBrowser3
+            // webBrowser1
             // 
-            this.webBrowser3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser3.Location = new System.Drawing.Point(3, 3);
-            this.webBrowser3.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser3.Name = "webBrowser3";
-            this.webBrowser3.Size = new System.Drawing.Size(1140, 609);
-            this.webBrowser3.TabIndex = 0;
-            this.webBrowser3.Url = new System.Uri("https://docs.google.com/spreadsheets/d/1ItRQcPk4LcsPLOUxmRJwejdXuLRd5Pao6rxXRFVKv" +
-        "hM/edit#gid=1264080518", System.UriKind.Absolute);
+            this.webBrowser1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.webBrowser1.Location = new System.Drawing.Point(3, 3);
+            this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
+            this.webBrowser1.Name = "webBrowser1";
+            this.webBrowser1.Size = new System.Drawing.Size(1140, 589);
+            this.webBrowser1.TabIndex = 0;
+            // 
+            // corpWalletTransactions1
+            // 
+            this.corpWalletTransactions1.Corp = null;
+            this.corpWalletTransactions1.Location = new System.Drawing.Point(6, 6);
+            this.corpWalletTransactions1.Name = "corpWalletTransactions1";
+            this.corpWalletTransactions1.Size = new System.Drawing.Size(685, 422);
+            this.corpWalletTransactions1.TabIndex = 0;
             // 
             // EveCeoHelper
             // 
@@ -654,12 +656,14 @@
             this.Load += new System.EventHandler(this.Form2_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabPage3.ResumeLayout(false);
             this.tabPage5.ResumeLayout(false);
             this.tabControl3.ResumeLayout(false);
+            this.tabPage9.ResumeLayout(false);
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -690,7 +694,6 @@
         private System.Windows.Forms.TabControl tabControl3;
         private System.Windows.Forms.TabPage tabPage8;
         private System.Windows.Forms.TabPage tabPage9;
-        private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
@@ -729,5 +732,6 @@
         private System.Windows.Forms.TabPage tabPage20;
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.WebBrowser webBrowser3;
+        private Controls.CorpWalletTransactions corpWalletTransactions1;
     }
 }
