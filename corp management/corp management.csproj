@@ -112,6 +112,12 @@
     <Compile Include="ApiKeyInputForm.Designer.cs">
       <DependentUpon>ApiKeyInputForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Controls\CorpPOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Controls\CorpPOS.Designer.cs">
+      <DependentUpon>CorpPOS.cs</DependentUpon>
+    </Compile>
     <Compile Include="Controls\CorpWalletTransactions.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -136,6 +142,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ApiKeyInputForm.resx">
       <DependentUpon>ApiKeyInputForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Controls\CorpPOS.resx">
+      <DependentUpon>CorpPOS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\CorpWalletTransactions.resx">
       <DependentUpon>CorpWalletTransactions.cs</DependentUpon>
@@ -167,6 +176,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="StaticData\mapDenormalize.csv" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
