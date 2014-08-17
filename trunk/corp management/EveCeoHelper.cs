@@ -84,12 +84,12 @@ namespace corp_management
 
             dataGridView1.DataSource = dt;
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
-            
 
-            //System.IO.BinaryReader br = new BinaryReader();
-            //System.Drawing.Image.FromStream();
+            pictureBox1.Load(@"http://image.eveonline.com/Corporation/" + currentCorp.CorporationId + "_128.png");
+                //corpHelper.GetCorpImage());
 
-            pictureBox1.Load(corpHelper.GetCorpImage());
+            corpPOS1.Corp = currentCorp;
+            corpPOS1.CorpPOSLoad();
 
         }
 

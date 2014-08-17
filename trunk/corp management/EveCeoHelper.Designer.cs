@@ -31,7 +31,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EveCeoHelper));
             this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -44,6 +43,7 @@
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
             this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.corpWalletTransactions1 = new corp_management.Controls.CorpWalletTransactions();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.TaxContributionTotalText = new System.Windows.Forms.Label();
             this.Label_TotalTaxContribution = new System.Windows.Forms.Label();
@@ -67,6 +67,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.corpPOS1 = new corp_management.Controls.CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -79,7 +80,6 @@
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.corpWalletTransactions1 = new corp_management.Controls.CorpWalletTransactions();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -94,6 +94,7 @@
             this.tabPage6.SuspendLayout();
             this.tabControl4.SuspendLayout();
             this.tabPage17.SuspendLayout();
+            this.tabPage7.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.tabPage18.SuspendLayout();
             this.tabControl5.SuspendLayout();
@@ -103,7 +104,6 @@
             // 
             // tabControl1
             // 
-            this.tabControl1.Controls.Add(this.tabPage13);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Controls.Add(this.tabPage5);
@@ -116,18 +116,6 @@
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(1154, 621);
             this.tabControl1.TabIndex = 0;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(1146, 595);
-            this.tabPage13.TabIndex = 5;
-            this.tabPage13.Text = "Main Page";
-            this.tabPage13.UseVisualStyleBackColor = true;
-            this.tabPage13.Click += new System.EventHandler(this.tabPage13_Click);
             // 
             // tabPage1
             // 
@@ -255,6 +243,14 @@
             this.tabPage9.TabIndex = 1;
             this.tabPage9.Text = "Journal";
             this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // corpWalletTransactions1
+            // 
+            this.corpWalletTransactions1.Corp = null;
+            this.corpWalletTransactions1.Location = new System.Drawing.Point(6, 6);
+            this.corpWalletTransactions1.Name = "corpWalletTransactions1";
+            this.corpWalletTransactions1.Size = new System.Drawing.Size(685, 422);
+            this.corpWalletTransactions1.TabIndex = 0;
             // 
             // tabPage15
             // 
@@ -491,6 +487,7 @@
             // 
             // tabPage7
             // 
+            this.tabPage7.Controls.Add(this.corpPOS1);
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
@@ -498,6 +495,14 @@
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "POS";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // corpPOS1
+            // 
+            this.corpPOS1.Corp = null;
+            this.corpPOS1.Location = new System.Drawing.Point(7, 6);
+            this.corpPOS1.Name = "corpPOS1";
+            this.corpPOS1.Size = new System.Drawing.Size(1131, 582);
+            this.corpPOS1.TabIndex = 0;
             // 
             // tabPage14
             // 
@@ -636,14 +641,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(1140, 589);
             this.webBrowser1.TabIndex = 0;
             // 
-            // corpWalletTransactions1
-            // 
-            this.corpWalletTransactions1.Corp = null;
-            this.corpWalletTransactions1.Location = new System.Drawing.Point(6, 6);
-            this.corpWalletTransactions1.Name = "corpWalletTransactions1";
-            this.corpWalletTransactions1.Size = new System.Drawing.Size(685, 422);
-            this.corpWalletTransactions1.TabIndex = 0;
-            // 
             // EveCeoHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -671,6 +668,7 @@
             this.tabControl4.ResumeLayout(false);
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
+            this.tabPage7.ResumeLayout(false);
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
             this.tabPage18.ResumeLayout(false);
@@ -697,7 +695,6 @@
         private System.Windows.Forms.TabControl tabControl4;
         private System.Windows.Forms.TabPage tabPage11;
         private System.Windows.Forms.TabPage tabPage12;
-        private System.Windows.Forms.TabPage tabPage13;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.RichTextBox richTextBox2;
         private System.Windows.Forms.RichTextBox richTextBox3;
@@ -733,5 +730,6 @@
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.WebBrowser webBrowser3;
         private Controls.CorpWalletTransactions corpWalletTransactions1;
+        private Controls.CorpPOS corpPOS1;
     }
 }
