@@ -31,7 +31,7 @@
             this.POS_treeView = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBox1 = new System.Windows.Forms.ListBox();
+            this.listBoxPOSDetails = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // POS_treeView
@@ -40,6 +40,7 @@
             this.POS_treeView.Name = "POS_treeView";
             this.POS_treeView.Size = new System.Drawing.Size(249, 451);
             this.POS_treeView.TabIndex = 0;
+            this.POS_treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.POS_treeView_NodeMouseClick);
             // 
             // label1
             // 
@@ -59,19 +60,19 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "POS Details";
             // 
-            // listBox1
+            // listBoxPOSDetails
             // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(285, 41);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(465, 446);
-            this.listBox1.TabIndex = 4;
+            this.listBoxPOSDetails.FormattingEnabled = true;
+            this.listBoxPOSDetails.Location = new System.Drawing.Point(285, 41);
+            this.listBoxPOSDetails.Name = "listBoxPOSDetails";
+            this.listBoxPOSDetails.Size = new System.Drawing.Size(465, 446);
+            this.listBoxPOSDetails.TabIndex = 4;
             // 
             // CorpPOS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.listBox1);
+            this.Controls.Add(this.listBoxPOSDetails);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.POS_treeView);
@@ -87,6 +88,6 @@
         private System.Windows.Forms.TreeView POS_treeView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBox1;
+        private System.Windows.Forms.ListBox listBoxPOSDetails;
     }
 }

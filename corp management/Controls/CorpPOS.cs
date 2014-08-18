@@ -24,6 +24,8 @@ namespace corp_management.Controls
 
         public Corporation Corp { get; set; }
 
+        public EveOnlineRowCollection<StarbaseList.Starbase> POSes { get; set; }
+
         public void CorpPOSLoad()
         {
             if(Corp == null)
@@ -31,15 +33,15 @@ namespace corp_management.Controls
                 throw new Exception("Please set Corp property before using Load method.");
             }
 
-            EveApiResponse<StarbaseList> poses = Corp.GetStarbaseList();
+            POSes = Corp.GetStarbaseList().Result.Starbases;
 
-            if(poses != null)
+            if (POSes != null)
             {
-                foreach(eZet.EveLib.Modules.Models.Corporation.StarbaseList.Starbase pos in poses.Result.Starbases)
+                foreach (eZet.EveLib.Modules.Models.Corporation.StarbaseList.Starbase pos in POSes)
                 {
                     string typeName = EveOnlineApi.Eve.GetTypeName(pos.TypeId).Result.Types.First().TypeName;
                     
-                    POS_treeView.Nodes.Add(typeName, GetCelestialNameFromID(pos.MoonId));
+                    POS_treeView.Nodes.Add(pos.ItemId.ToString(), GetCelestialNameFromID(pos.MoonId));
                 }
             }
         }
@@ -64,6 +66,46 @@ namespace corp_management.Controls
             }
 
             return resultLine.Split(',')[11].Replace("\"","");
+        }
+
+        private void POS_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        {
+
+            listBoxPOSDetails.Items.Clear();
+
+            StarbaseList.Starbase selectedPOS = GetStarBaseFromCollection(Convert.ToInt64(e.Node.Name));
+            
+            EveApiResponse<StarbaseDetails> posDetails = Corp.GetStarbaseDetails(selectedPOS.ItemId);
+            
+            //posDetails.Result.
+            string posLocation = GetCelestialNameFromID(selectedPOS.LocationId);
+            EveOnlineRowCollection<StarbaseDetails.FuelEntry> fuelInfo = posDetails.Result.Fuel;
+            
+            foreach(StarbaseDetails.FuelEntry fi in fuelInfo)
+            {
+                string fuelType = EveOnlineApi.Eve.GetTypeName(fi.TypeId).Result.Types[0].TypeName;
+                listBoxPOSDetails.Items.Add("Fuel: " + fuelType + " Amount: " + fi.Quantity.ToString());
+            }
+
+            listBoxPOSDetails.Items.Add("Location: " + posLocation);
+            listBoxPOSDetails.Items.Add("Status: " + Convert.ToString(selectedPOS.State));
+            listBoxPOSDetails.Items.Add("Online since: " + posDetails.Result.OnlineTimestamp.ToShortDateString());
+            //listBoxPOSDetails.Items.Add()
+        }
+
+        private StarbaseList.Starbase GetStarBaseFromCollection(long itemID)
+        {
+            StarbaseList.Starbase p = null;
+            foreach (eZet.EveLib.Modules.Models.Corporation.StarbaseList.Starbase pos in POSes)
+            {
+                if (pos.ItemId == itemID)
+                {
+                    p = pos;
+                    break;
+                }
+            }
+
+            return p;
         }
 
 
