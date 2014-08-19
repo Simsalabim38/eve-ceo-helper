@@ -11,6 +11,7 @@ using eZet.EveLib.Modules;
 using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules.Models.Corporation;
 using System.IO;
+using corp_management.Helper;
 
 
 namespace corp_management.Controls
@@ -80,17 +81,37 @@ namespace corp_management.Controls
             //posDetails.Result.
             string posLocation = GetCelestialNameFromID(selectedPOS.LocationId);
             EveOnlineRowCollection<StarbaseDetails.FuelEntry> fuelInfo = posDetails.Result.Fuel;
-            
+
+            ImageList imgLst = GetImageListForPOSES();
+
+            listBoxPOSDetails.SmallImageList = imgLst;
+
             foreach(StarbaseDetails.FuelEntry fi in fuelInfo)
             {
                 string fuelType = EveOnlineApi.Eve.GetTypeName(fi.TypeId).Result.Types[0].TypeName;
-                listBoxPOSDetails.Items.Add("Fuel: " + fuelType + " Amount: " + fi.Quantity.ToString());
+                listBoxPOSDetails.Items.Add(fi.Quantity.ToString(), fi.TypeId.ToString());
+
             }
 
+            listBoxPOSDetails.Items.Add("Tower-type: " + EveOnlineApi.Eve.GetTypeName(selectedPOS.TypeId).Result.Types.First().TypeName);
             listBoxPOSDetails.Items.Add("Location: " + posLocation);
             listBoxPOSDetails.Items.Add("Status: " + Convert.ToString(selectedPOS.State));
             listBoxPOSDetails.Items.Add("Online since: " + posDetails.Result.OnlineTimestamp.ToShortDateString());
             //listBoxPOSDetails.Items.Add()
+        }
+
+        private ImageList GetImageListForPOSES()
+        {
+            int[] fuelblocks = new int[] { 4247,4051,4312,4246,16275 };
+            ImageList fuelpics = new ImageList();
+            foreach(int typeId in fuelblocks)
+            {
+                PictureBox pic = new PictureBox() { ImageLocation = @"http://image.eveonline.com/Type/" + typeId + "_64.png" };
+                pic.Load();
+                fuelpics.Images.Add(typeId.ToString(),pic.Image);
+            }
+
+            return fuelpics;
         }
 
         private StarbaseList.Starbase GetStarBaseFromCollection(long itemID)

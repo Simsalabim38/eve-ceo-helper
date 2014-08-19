@@ -138,6 +138,7 @@
     </Compile>
     <Compile Include="Helper\CorpHelper.cs" />
     <Compile Include="Helper\KeyHelper.cs" />
+    <Compile Include="Helper\POSListboxItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ApiKeyInputForm.resx">
