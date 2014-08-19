@@ -31,7 +31,7 @@
             this.POS_treeView = new System.Windows.Forms.TreeView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.listBoxPOSDetails = new System.Windows.Forms.ListBox();
+            this.listBoxPOSDetails = new System.Windows.Forms.ListView();
             this.SuspendLayout();
             // 
             // POS_treeView
@@ -62,11 +62,15 @@
             // 
             // listBoxPOSDetails
             // 
-            this.listBoxPOSDetails.FormattingEnabled = true;
+            this.listBoxPOSDetails.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.listBoxPOSDetails.FullRowSelect = true;
+            this.listBoxPOSDetails.GridLines = true;
             this.listBoxPOSDetails.Location = new System.Drawing.Point(285, 41);
             this.listBoxPOSDetails.Name = "listBoxPOSDetails";
-            this.listBoxPOSDetails.Size = new System.Drawing.Size(465, 446);
-            this.listBoxPOSDetails.TabIndex = 4;
+            this.listBoxPOSDetails.Size = new System.Drawing.Size(468, 451);
+            this.listBoxPOSDetails.TabIndex = 5;
+            this.listBoxPOSDetails.UseCompatibleStateImageBehavior = false;
+            this.listBoxPOSDetails.View = System.Windows.Forms.View.SmallIcon;
             // 
             // CorpPOS
             // 
@@ -88,6 +92,6 @@
         private System.Windows.Forms.TreeView POS_treeView;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ListBox listBoxPOSDetails;
+        private System.Windows.Forms.ListView listBoxPOSDetails;
     }
 }
