@@ -156,5 +156,10 @@ namespace corp_management
             corpWalletTransactions1.Corp = currentCorp;
             corpWalletTransactions1.LoadDataGrid();
         }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
