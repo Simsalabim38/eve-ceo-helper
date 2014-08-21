@@ -70,6 +70,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.corpPOS1 = new CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -82,7 +83,11 @@
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.corpPOS1 = new CorpPOS();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -105,6 +110,7 @@
             this.tabControl5.SuspendLayout();
             this.tabPage19.SuspendLayout();
             this.tabPage20.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -116,10 +122,10 @@
             this.tabControl1.Controls.Add(this.tabPage7);
             this.tabControl1.Controls.Add(this.tabPage14);
             this.tabControl1.Controls.Add(this.tabPage18);
-            this.tabControl1.Location = new System.Drawing.Point(1, 1);
+            this.tabControl1.Location = new System.Drawing.Point(1, 23);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(1154, 621);
+            this.tabControl1.Size = new System.Drawing.Size(1154, 599);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -131,7 +137,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage1.Size = new System.Drawing.Size(1146, 573);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Corp Details";
             // 
@@ -151,7 +157,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage2.Size = new System.Drawing.Size(1146, 573);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Human Resources";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -211,7 +217,7 @@
             this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage5.Size = new System.Drawing.Size(1146, 573);
             this.tabPage5.TabIndex = 2;
             this.tabPage5.Text = "Accounting";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -422,7 +428,7 @@
             this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage6.Size = new System.Drawing.Size(1146, 573);
             this.tabPage6.TabIndex = 3;
             this.tabPage6.Text = "Industry";
             this.tabPage6.UseVisualStyleBackColor = true;
@@ -527,10 +533,19 @@
             this.tabPage7.Location = new System.Drawing.Point(4, 22);
             this.tabPage7.Name = "tabPage7";
             this.tabPage7.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage7.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage7.Size = new System.Drawing.Size(1146, 573);
             this.tabPage7.TabIndex = 4;
             this.tabPage7.Text = "POS";
             this.tabPage7.UseVisualStyleBackColor = true;
+            // 
+            // corpPOS1
+            // 
+            this.corpPOS1.Corp = null;
+            this.corpPOS1.Location = new System.Drawing.Point(7, 6);
+            this.corpPOS1.Name = "corpPOS1";
+            this.corpPOS1.POSes = null;
+            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
+            this.corpPOS1.TabIndex = 0;
             // 
             // tabPage14
             // 
@@ -541,7 +556,7 @@
             this.tabPage14.Location = new System.Drawing.Point(4, 22);
             this.tabPage14.Name = "tabPage14";
             this.tabPage14.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage14.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage14.Size = new System.Drawing.Size(1146, 573);
             this.tabPage14.TabIndex = 6;
             this.tabPage14.Text = "Standing";
             this.tabPage14.UseVisualStyleBackColor = true;
@@ -599,7 +614,7 @@
             this.tabPage18.Location = new System.Drawing.Point(4, 22);
             this.tabPage18.Name = "tabPage18";
             this.tabPage18.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage18.Size = new System.Drawing.Size(1146, 595);
+            this.tabPage18.Size = new System.Drawing.Size(1146, 573);
             this.tabPage18.TabIndex = 7;
             this.tabPage18.Text = "Spreadsheets";
             this.tabPage18.UseVisualStyleBackColor = true;
@@ -666,17 +681,49 @@
             this.webBrowser1.Location = new System.Drawing.Point(3, 3);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(1140, 589);
+            this.webBrowser1.Size = new System.Drawing.Size(1140, 567);
             this.webBrowser1.TabIndex = 0;
             // 
-            // corpPOS2
+            // menuStrip1
             // 
-            this.corpPOS1.Corp = null;
-            this.corpPOS1.Location = new System.Drawing.Point(7, 6);
-            this.corpPOS1.Name = "corpPOS1";
-            this.corpPOS1.POSes = null;
-            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
-            this.corpPOS1.TabIndex = 0;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1155, 24);
+            this.menuStrip1.TabIndex = 1;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // EveCeoHelper
             // 
@@ -684,7 +731,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1155, 623);
             this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "EveCeoHelper";
             this.Text = "Eve Ceo Helper";
             this.Load += new System.EventHandler(this.Form2_Load);
@@ -715,7 +765,10 @@
             this.tabControl5.ResumeLayout(false);
             this.tabPage19.ResumeLayout(false);
             this.tabPage20.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -775,5 +828,10 @@
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label7;
         private CorpPOS corpPOS2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }

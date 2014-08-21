@@ -26,7 +26,7 @@ namespace EveCeoHelper
 
         public Corporation Corp { get; set; }
 
-        public EveOnlineRowCollection<StarbaseList.Starbase> POSes { get; set; }
+        public DataSet POSes { get; set; }
 
         public void CorpPOSLoad()
         {
@@ -35,25 +35,30 @@ namespace EveCeoHelper
                 throw new Exception("Please set Corp property before using Load method.");
             }
 
+            // Initialize POS class and load the data into the dataset
             POS poses = new POS(Corp);
             poses.InitializePOSData();
+            POSes = poses.POSdataSet;
 
-            //foreach(DataRow row in poses.POSdataSet.Tables[0].Rows)
-            //{
-
-            //}
-
-            POSes = Corp.GetStarbaseList().Result.Starbases;
-
-            if (POSes != null)
+            // First add all root-nodes
+            foreach (DataRow row in poses.POSdataSet.Tables[0].Rows)
             {
-                foreach (eZet.EveLib.Modules.Models.Corporation.StarbaseList.Starbase pos in POSes)
-                {
-                    string typeName = EveOnlineApi.Eve.GetTypeName(pos.TypeId).Result.Types.First().TypeName;
+                TreeNode n = POS_treeView.Nodes.Find(row["POSLocationName"].ToString(), true).FirstOrDefault();
+                if(n == null)
+                    POS_treeView.Nodes.Add(row["POSLocationName"].ToString(), row["POSLocationName"].ToString());
+            }
 
-                    POS_treeView.Nodes.Add(pos.ItemId.ToString(), Celestials.GetCelestialNameFromID(pos.MoonId));
+            // Now add all sub-nodes with final pos data
+            foreach(DataRow row in poses.POSdataSet.Tables[0].Rows)
+            {
+                TreeNode node = POS_treeView.Nodes.Find(row["POSLocationName"].ToString(), true).FirstOrDefault();
+                if (node != null)
+                {
+                    node.Nodes.Add(row["POSid"].ToString(), row["POSMoonName"].ToString());
+                    continue;
                 }
             }
+
         }
 
         /*private void POS_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
@@ -105,19 +110,34 @@ namespace EveCeoHelper
             return fuelpics;
         }
 
-        private StarbaseList.Starbase GetStarBaseFromCollection(long itemID)
+        private void POS_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
-            StarbaseList.Starbase p = null;
-            foreach (eZet.EveLib.Modules.Models.Corporation.StarbaseList.Starbase pos in POSes)
+            long number1 = 0;
+            bool canConvert = long.TryParse(e.Node.Name.ToString(), out number1);
+            if (canConvert == true)
             {
-                if (pos.ItemId == itemID)
+                DataRow row = POSes.Tables[0].Rows.Find(e.Node.Name);
+                if(row != null)
                 {
-                    p = pos;
-                    break;
+                    listBoxPOSDetails.Items.Clear();
+                    ImageList imgLst = GetImageListForPOSES();
+                    listBoxPOSDetails.SmallImageList = imgLst;
+
+                    // Add Fuel In
+                    listBoxPOSDetails.Items.Add(row["POSFuelQuantity1"].ToString(), row["POSFuelid1"].ToString());
+                    listBoxPOSDetails.Items.Add(row["POSFuelQuantity2"].ToString(), row["POSFuelid2"].ToString());
+                    listBoxPOSDetails.Items.Add("Tower-type: " + row["POSTypeName"].ToString());
+                    listBoxPOSDetails.Items.Add("Location: " + row["POSLocationName"].ToString());
+                    listBoxPOSDetails.Items.Add("Status: " + row["POSStatus"].ToString());
+                    listBoxPOSDetails.Items.Add("Online since: " + row["POSOnlineSince"].ToString());
+                    listBoxPOSDetails.Items.Add(row["POSOfflineDate"].ToString());
                 }
             }
-
-            return p;
+            else
+            {
+                return;
+            }
+            
         }
 
 
