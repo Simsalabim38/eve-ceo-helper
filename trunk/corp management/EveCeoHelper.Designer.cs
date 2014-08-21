@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EveCeoHelper));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.button5 = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -42,7 +44,11 @@
             this.tabPage5 = new System.Windows.Forms.TabPage();
             this.tabControl3 = new System.Windows.Forms.TabControl();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.tabPage15 = new System.Windows.Forms.TabPage();
             this.TaxContributionTotalText = new System.Windows.Forms.Label();
             this.Label_TotalTaxContribution = new System.Windows.Forms.Label();
@@ -66,6 +72,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.corpPOS1 = new corp_management.Controls.CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -78,15 +85,6 @@
             this.tabPage20 = new System.Windows.Forms.TabPage();
             this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.corpWalletTransactions1 = new corp_management.Controls.CorpWalletTransactions();
-            this.corpPOS1 = new corp_management.Controls.CorpPOS();
-            this.button5 = new System.Windows.Forms.Button();
-            this.textBox4 = new System.Windows.Forms.TextBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -96,7 +94,8 @@
             this.tabPage5.SuspendLayout();
             this.tabControl3.SuspendLayout();
             this.tabPage8.SuspendLayout();
-            this.tabPage9.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.tabPage15.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
@@ -108,8 +107,6 @@
             this.tabControl5.SuspendLayout();
             this.tabPage19.SuspendLayout();
             this.tabPage20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -139,6 +136,24 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Corp Details";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(291, 392);
+            this.textBox4.Multiline = true;
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(400, 128);
+            this.textBox4.TabIndex = 3;
+            this.textBox4.Text = resources.GetString("textBox4.Text");
+            // 
+            // button5
+            // 
+            this.button5.Location = new System.Drawing.Point(425, 540);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(115, 28);
+            this.button5.TabIndex = 2;
+            this.button5.Text = "load all";
+            this.button5.UseVisualStyleBackColor = true;
             // 
             // pictureBox1
             // 
@@ -224,7 +239,6 @@
             // tabControl3
             // 
             this.tabControl3.Controls.Add(this.tabPage8);
-            this.tabControl3.Controls.Add(this.tabPage9);
             this.tabControl3.Controls.Add(this.tabPage15);
             this.tabControl3.Controls.Add(this.tabPage16);
             this.tabControl3.Location = new System.Drawing.Point(0, 5);
@@ -232,7 +246,6 @@
             this.tabControl3.SelectedIndex = 0;
             this.tabControl3.Size = new System.Drawing.Size(1146, 590);
             this.tabControl3.TabIndex = 0;
-            this.tabControl3.Click += new System.EventHandler(this.tabControl3_Click);
             // 
             // tabPage8
             // 
@@ -250,16 +263,50 @@
             this.tabPage8.UseVisualStyleBackColor = true;
             this.tabPage8.Click += new System.EventHandler(this.tabPage8_Click);
             // 
-            // tabPage9
+            // label7
             // 
-            this.tabPage9.Controls.Add(this.corpWalletTransactions1);
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(1138, 564);
-            this.tabPage9.TabIndex = 1;
-            this.tabPage9.Text = "Journal";
-            this.tabPage9.UseVisualStyleBackColor = true;
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(183, 77);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(68, 20);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Journal";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(839, 77);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(112, 20);
+            this.label6.TabIndex = 3;
+            this.label6.Text = "Transactions";
+            this.label6.Click += new System.EventHandler(this.label6_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(6, 100);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.Size = new System.Drawing.Size(530, 450);
+            this.dataGridView3.TabIndex = 2;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(618, 100);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(514, 450);
+            this.dataGridView2.TabIndex = 1;
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(496, 17);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(135, 21);
+            this.comboBox2.TabIndex = 0;
             // 
             // tabPage15
             // 
@@ -505,6 +552,15 @@
             this.tabPage7.Text = "POS";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // corpPOS1
+            // 
+            this.corpPOS1.Corp = null;
+            this.corpPOS1.Location = new System.Drawing.Point(7, 6);
+            this.corpPOS1.Name = "corpPOS1";
+            this.corpPOS1.POSes = null;
+            this.corpPOS1.Size = new System.Drawing.Size(1131, 582);
+            this.corpPOS1.TabIndex = 0;
+            // 
             // tabPage14
             // 
             this.tabPage14.Controls.Add(this.textBox2);
@@ -523,22 +579,22 @@
             // 
             this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox2.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox2.Location = new System.Drawing.Point(12, 83);
+            this.textBox2.Location = new System.Drawing.Point(12, 55);
             this.textBox2.Multiline = true;
             this.textBox2.Name = "textBox2";
             this.textBox2.ReadOnly = true;
-            this.textBox2.Size = new System.Drawing.Size(489, 501);
+            this.textBox2.Size = new System.Drawing.Size(489, 529);
             this.textBox2.TabIndex = 4;
             // 
             // textBox1
             // 
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.textBox1.Location = new System.Drawing.Point(606, 83);
+            this.textBox1.Location = new System.Drawing.Point(606, 55);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
             this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(516, 501);
+            this.textBox1.Size = new System.Drawing.Size(516, 529);
             this.textBox1.TabIndex = 3;
             // 
             // label2
@@ -642,86 +698,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(1140, 589);
             this.webBrowser1.TabIndex = 0;
             // 
-            // comboBox2
-            // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(496, 17);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(135, 21);
-            this.comboBox2.TabIndex = 0;
-            // 
-            // dataGridView2
-            // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(618, 100);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(514, 450);
-            this.dataGridView2.TabIndex = 1;
-            // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(6, 100);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(530, 450);
-            this.dataGridView3.TabIndex = 2;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("MS Reference Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(839, 77);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(115, 20);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "Transaction";
-            this.label6.Click += new System.EventHandler(this.label6_Click);
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(183, 77);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(91, 20);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "JOURNAL";
-            // 
-            // corpWalletTransactions1
-            // 
-            this.corpWalletTransactions1.Corp = null;
-            this.corpWalletTransactions1.Location = new System.Drawing.Point(6, 6);
-            this.corpWalletTransactions1.Name = "corpWalletTransactions1";
-            this.corpWalletTransactions1.Size = new System.Drawing.Size(685, 422);
-            this.corpWalletTransactions1.TabIndex = 0;
-            // 
-            // corpPOS1
-            // 
-            this.corpPOS1.Corp = null;
-            this.corpPOS1.Location = new System.Drawing.Point(7, 6);
-            this.corpPOS1.Name = "corpPOS1";
-            this.corpPOS1.POSes = null;
-            this.corpPOS1.Size = new System.Drawing.Size(1131, 582);
-            this.corpPOS1.TabIndex = 0;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(425, 540);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(115, 28);
-            this.button5.TabIndex = 2;
-            this.button5.Text = "load all";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(291, 392);
-            this.textBox4.Multiline = true;
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(400, 128);
-            this.textBox4.TabIndex = 3;
-            this.textBox4.Text = resources.GetString("textBox4.Text");
-            // 
             // EveCeoHelper
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -743,7 +719,8 @@
             this.tabControl3.ResumeLayout(false);
             this.tabPage8.ResumeLayout(false);
             this.tabPage8.PerformLayout();
-            this.tabPage9.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.tabPage15.ResumeLayout(false);
             this.tabPage15.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -758,8 +735,6 @@
             this.tabControl5.ResumeLayout(false);
             this.tabPage19.ResumeLayout(false);
             this.tabPage20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -814,8 +789,6 @@
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.WebBrowser webBrowser3;
         private Controls.CorpPOS corpPOS1;
-        private System.Windows.Forms.TabPage tabPage9;
-        private Controls.CorpWalletTransactions corpWalletTransactions1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView3;
