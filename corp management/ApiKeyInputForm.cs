@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using corp_management.Helper;
+using EveCeoHelper.Helper;
 
-namespace corp_management
+namespace EveCeoHelper
 {
     public partial class ApiKeyInputForm : Form
     {

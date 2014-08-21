@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace corp_management.Helper
+namespace EveCeoHelper.Helper
 {
     class EveApiKeyHelper
     {

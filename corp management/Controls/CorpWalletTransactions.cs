@@ -7,10 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using corp_management.Helper;
+using EveCeoHelper.Helper;
 using eZet.EveLib.Modules;
 
-namespace corp_management.Controls
+namespace EveCeoHelper.Controls
 {
     public partial class CorpWalletTransactions : UserControl
     {

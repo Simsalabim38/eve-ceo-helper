@@ -7,8 +7,8 @@
     <ProjectGuid>{8471825B-E94D-4520-836F-DB0FB00428F7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>corp_management</RootNamespace>
-    <AssemblyName>corp management</AssemblyName>
+    <RootNamespace>EveCeoHelper</RootNamespace>
+    <AssemblyName>EveCeoHelper</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <IsWebBootstrapper>false</IsWebBootstrapper>
@@ -48,7 +48,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>corp_management.Program</StartupObject>
+    <StartupObject>EveCeoHelper.Program</StartupObject>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>E27DC8DE78739EDA985AA380376B9AB3A88CBD6D</ManifestCertificateThumbprint>

@@ -1,4 +1,4 @@
-﻿using corp_management.Helper;
+﻿using EveCeoHelper.Helper;
 using eZet.EveLib.Modules;
 using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules.Models.Account;
@@ -14,7 +14,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace corp_management
+namespace EveCeoHelper
 {
     public partial class EveCeoHelper : Form
     {
@@ -150,6 +150,7 @@ namespace corp_management
         {
 
         }
+
 
         private void label6_Click(object sender, EventArgs e)
         {

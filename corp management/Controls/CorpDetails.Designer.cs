@@ -1,4 +1,4 @@
-﻿namespace corp_management.Helper
+﻿namespace EveCeoHelper.Helper
 {
     partial class CorpDetails
     {

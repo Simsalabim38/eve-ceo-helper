@@ -11,7 +11,7 @@ using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules;
 using eZet.EveLib.Modules.Models.Character;
 
-namespace corp_management.Helper
+namespace EveCeoHelper.Helper
 {
     public partial class CorpDetails : UserControl
     {
