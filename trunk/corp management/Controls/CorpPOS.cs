@@ -12,6 +12,7 @@ using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules.Models.Corporation;
 using System.IO;
 using EveCeoHelper.Helper;
+using EveCeoHelper.CoreData;
 
 
 namespace EveCeoHelper
@@ -34,6 +35,14 @@ namespace EveCeoHelper
                 throw new Exception("Please set Corp property before using Load method.");
             }
 
+            POS poses = new POS(Corp);
+            poses.InitializePOSData();
+
+            //foreach(DataRow row in poses.POSdataSet.Tables[0].Rows)
+            //{
+
+            //}
+
             POSes = Corp.GetStarbaseList().Result.Starbases;
 
             if (POSes != null)
@@ -41,45 +50,22 @@ namespace EveCeoHelper
                 foreach (eZet.EveLib.Modules.Models.Corporation.StarbaseList.Starbase pos in POSes)
                 {
                     string typeName = EveOnlineApi.Eve.GetTypeName(pos.TypeId).Result.Types.First().TypeName;
-                    
-                    POS_treeView.Nodes.Add(pos.ItemId.ToString(), GetCelestialNameFromID(pos.MoonId));
+
+                    POS_treeView.Nodes.Add(pos.ItemId.ToString(), Celestials.GetCelestialNameFromID(pos.MoonId));
                 }
             }
         }
 
-        public string GetCelestialNameFromID(long id)
-        {
-            string csvFile = @".\StaticData\mapDenormalize.csv";
-            string _id = id.ToString();
-            char csvSeperator = ',';
-            string resultLine = String.Empty;
-
-            foreach(string line in File.ReadLines(csvFile))
-            {
-                foreach (string value in line.Replace("\"", "").Split('\r', '\n', csvSeperator))
-                    if (value.Trim() == _id.Trim())
-                    {
-                        resultLine = line;
-                        break;
-                    }
-                if (!String.IsNullOrEmpty(resultLine))
-                    break;
-            }
-
-            return resultLine.Split(',')[11].Replace("\"","");
-        }
-
-        private void POS_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
+        /*private void POS_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
         {
 
             listBoxPOSDetails.Items.Clear();
 
-            StarbaseList.Starbase selectedPOS = GetStarBaseFromCollection(Convert.ToInt64(e.Node.Name));
+            //DataRow row = Convert.ToInt64(e.Node.Name);
             
             EveApiResponse<StarbaseDetails> posDetails = Corp.GetStarbaseDetails(selectedPOS.ItemId);
             
-            //posDetails.Result.
-            string posLocation = GetCelestialNameFromID(selectedPOS.LocationId);
+            string posLocation = Celestials.GetCelestialNameFromID(selectedPOS.LocationId);
             EveOnlineRowCollection<StarbaseDetails.FuelEntry> fuelInfo = posDetails.Result.Fuel;
 
             ImageList imgLst = GetImageListForPOSES();
@@ -101,30 +87,9 @@ namespace EveCeoHelper
             listBoxPOSDetails.Items.Add("Location: " + posLocation);
             listBoxPOSDetails.Items.Add("Status: " + Convert.ToString(selectedPOS.State));
             listBoxPOSDetails.Items.Add("Online since: " + posDetails.Result.OnlineTimestamp.ToShortDateString());
-            listBoxPOSDetails.Items.Add(CalculateOfflineDate(fuelQuantity, EveOnlineApi.Eve.GetTypeName(selectedPOS.TypeId).Result.Types.First().TypeName));
+            //listBoxPOSDetails.Items.Add(CalculateOfflineDate(fuelQuantity, EveOnlineApi.Eve.GetTypeName(selectedPOS.TypeId).Result.Types.First().TypeName));
             //listBoxPOSDetails.Items.Add()
-        }
-
-        private string CalculateOfflineDate(int quantity, string towerType)
-        {
-            DateTime offDate = new DateTime();
-
-            if(towerType.ToLower().Contains("small"))
-            {
-                double days = quantity / 240;
-                offDate = DateTime.Now.AddDays(days);
-            } else if(towerType.ToLower().Contains("medium"))
-            {
-                double days = quantity / 480;
-                offDate = DateTime.Now.AddDays(days);
-            } else
-            {
-                double days = quantity / 960;
-                offDate = DateTime.Now.AddDays(days);
-            }
-
-            return "Goes offline on:" + offDate.ToShortDateString();
-        }
+        }*/
 
         private ImageList GetImageListForPOSES()
         {
