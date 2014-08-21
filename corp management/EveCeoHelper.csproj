@@ -124,6 +124,8 @@
     <Compile Include="Controls\CorpWalletTransactions.Designer.cs">
       <DependentUpon>CorpWalletTransactions.cs</DependentUpon>
     </Compile>
+    <Compile Include="CoreData\Celestials.cs" />
+    <Compile Include="CoreData\POS.cs" />
     <Compile Include="EveCeoHelper.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,7 +140,6 @@
     </Compile>
     <Compile Include="Helper\CorpHelper.cs" />
     <Compile Include="Helper\KeyHelper.cs" />
-    <Compile Include="Helper\POSListboxItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="ApiKeyInputForm.resx">
@@ -168,6 +169,7 @@
     </Compile>
     <None Include="corp management_TemporaryKey.pfx" />
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\EveCeoHelper.CoreData.POS.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -203,6 +205,7 @@
     <Content Include="aperture-6x.ico" />
     <None Include="Resources\EVEOnlineLogo.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -38,9 +38,8 @@
             // 
             this.POS_treeView.Location = new System.Drawing.Point(16, 41);
             this.POS_treeView.Name = "POS_treeView";
-            this.POS_treeView.Size = new System.Drawing.Size(249, 451);
+            this.POS_treeView.Size = new System.Drawing.Size(249, 218);
             this.POS_treeView.TabIndex = 0;
-            this.POS_treeView.NodeMouseClick += new System.Windows.Forms.TreeNodeMouseClickEventHandler(this.POS_treeView_NodeMouseClick);
             // 
             // label1
             // 
@@ -67,7 +66,7 @@
             this.listBoxPOSDetails.GridLines = true;
             this.listBoxPOSDetails.Location = new System.Drawing.Point(285, 41);
             this.listBoxPOSDetails.Name = "listBoxPOSDetails";
-            this.listBoxPOSDetails.Size = new System.Drawing.Size(468, 451);
+            this.listBoxPOSDetails.Size = new System.Drawing.Size(468, 218);
             this.listBoxPOSDetails.TabIndex = 5;
             this.listBoxPOSDetails.UseCompatibleStateImageBehavior = false;
             this.listBoxPOSDetails.View = System.Windows.Forms.View.SmallIcon;
@@ -81,7 +80,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.POS_treeView);
             this.Name = "CorpPOS";
-            this.Size = new System.Drawing.Size(771, 509);
+            this.Size = new System.Drawing.Size(771, 439);
             this.ResumeLayout(false);
             this.PerformLayout();
 
