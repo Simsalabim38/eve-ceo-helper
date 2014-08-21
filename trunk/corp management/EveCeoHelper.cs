@@ -69,6 +69,7 @@ namespace EveCeoHelper
                 // Handle Private API Key
             }
 
+            /*
             DateTime todayDate = DateTime.Now;
             DateTime start = new DateTime(todayDate.Year, todayDate.Month, 1, 0, 0, 1);
             DateTime stop = DateTime.Now;
@@ -83,7 +84,7 @@ namespace EveCeoHelper
             dt.Rows[dt.Rows.Count - 1].Delete();
 
             dataGridView1.DataSource = dt;
-            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
+            dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);*/
 
             pictureBox1.Load(@"http://image.eveonline.com/Corporation/" + currentCorp.CorporationId + "_128.png");
                 //corpHelper.GetCorpImage());
@@ -155,6 +156,17 @@ namespace EveCeoHelper
         private void label6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            AboutDialog about = new AboutDialog();
+            about.ShowDialog();
         }
     }
 }

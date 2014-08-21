@@ -121,7 +121,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ApiKeyInputForm";
             this.Text = "API Key";
-            this.Load += new System.EventHandler(this.ApiKeyInputForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

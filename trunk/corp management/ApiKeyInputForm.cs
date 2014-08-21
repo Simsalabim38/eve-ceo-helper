@@ -74,11 +74,6 @@ namespace EveCeoHelper
             this.Close();
         }
 
-        private void ApiKeyInputForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
 
     }
 }

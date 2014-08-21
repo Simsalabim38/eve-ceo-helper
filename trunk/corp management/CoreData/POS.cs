@@ -117,7 +117,7 @@ namespace EveCeoHelper.CoreData
                 offDate = DateTime.Now.AddDays(days);
             }
 
-            return "Goes offline on:" + offDate.ToShortDateString();
+            return "Goes offline on: " + offDate.ToShortDateString();
         }
 
     }
