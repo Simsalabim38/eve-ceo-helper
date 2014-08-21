@@ -85,10 +85,14 @@ namespace corp_management.Controls
             ImageList imgLst = GetImageListForPOSES();
 
             listBoxPOSDetails.SmallImageList = imgLst;
-
+            int fuelQuantity = 0;
             foreach(StarbaseDetails.FuelEntry fi in fuelInfo)
             {
                 string fuelType = EveOnlineApi.Eve.GetTypeName(fi.TypeId).Result.Types[0].TypeName;
+
+                if (!fuelType.Equals("Strontium Clathrates"))
+                    fuelQuantity = fi.Quantity;
+
                 listBoxPOSDetails.Items.Add(fi.Quantity.ToString(), fi.TypeId.ToString());
 
             }
@@ -97,7 +101,29 @@ namespace corp_management.Controls
             listBoxPOSDetails.Items.Add("Location: " + posLocation);
             listBoxPOSDetails.Items.Add("Status: " + Convert.ToString(selectedPOS.State));
             listBoxPOSDetails.Items.Add("Online since: " + posDetails.Result.OnlineTimestamp.ToShortDateString());
+            listBoxPOSDetails.Items.Add(CalculateOfflineDate(fuelQuantity, EveOnlineApi.Eve.GetTypeName(selectedPOS.TypeId).Result.Types.First().TypeName));
             //listBoxPOSDetails.Items.Add()
+        }
+
+        private string CalculateOfflineDate(int quantity, string towerType)
+        {
+            DateTime offDate = new DateTime();
+
+            if(towerType.ToLower().Contains("small"))
+            {
+                double days = quantity / 240;
+                offDate = DateTime.Now.AddDays(days);
+            } else if(towerType.ToLower().Contains("medium"))
+            {
+                double days = quantity / 480;
+                offDate = DateTime.Now.AddDays(days);
+            } else
+            {
+                double days = quantity / 960;
+                offDate = DateTime.Now.AddDays(days);
+            }
+
+            return "Goes offline on:" + offDate.ToShortDateString();
         }
 
         private ImageList GetImageListForPOSES()
@@ -106,7 +132,7 @@ namespace corp_management.Controls
             ImageList fuelpics = new ImageList();
             foreach(int typeId in fuelblocks)
             {
-                PictureBox pic = new PictureBox() { ImageLocation = @"http://image.eveonline.com/Type/" + typeId + "_64.png" };
+                PictureBox pic = new PictureBox() { ImageLocation = @"http://image.eveonline.com/Type/" + typeId + "_32.png" };
                 pic.Load();
                 fuelpics.Images.Add(typeId.ToString(),pic.Image);
             }

@@ -151,12 +151,6 @@ namespace corp_management
 
         }
 
-        private void tabControl3_Click(object sender, EventArgs e)
-        {
-            corpWalletTransactions1.Corp = currentCorp;
-            corpWalletTransactions1.LoadDataGrid();
-        }
-
         private void label6_Click(object sender, EventArgs e)
         {
 
