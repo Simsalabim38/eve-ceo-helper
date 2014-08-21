@@ -1,4 +1,4 @@
-﻿namespace corp_management
+﻿namespace EveCeoHelper
 {
     partial class EveCeoHelper
     {
@@ -72,7 +72,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.corpPOS1 = new corp_management.Controls.CorpPOS();
+            this.corpPOS1 = new CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -788,7 +788,7 @@
         private System.Windows.Forms.TabPage tabPage20;
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.WebBrowser webBrowser3;
-        private Controls.CorpPOS corpPOS1;
+        private CorpPOS corpPOS1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView3;

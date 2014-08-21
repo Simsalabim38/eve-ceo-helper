@@ -11,10 +11,10 @@ using eZet.EveLib.Modules;
 using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules.Models.Corporation;
 using System.IO;
-using corp_management.Helper;
+using EveCeoHelper.Helper;
 
 
-namespace corp_management.Controls
+namespace EveCeoHelper
 {
     public partial class CorpPOS : UserControl
     {

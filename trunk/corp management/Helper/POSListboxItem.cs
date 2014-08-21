@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace corp_management.Helper
+namespace EveCeoHelper.Helper
 {
     public class POSListboxItem
     {

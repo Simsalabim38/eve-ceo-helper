@@ -1,4 +1,4 @@
-﻿namespace corp_management
+﻿namespace EveCeoHelper
 {
     partial class ApiKeyInputForm
     {
