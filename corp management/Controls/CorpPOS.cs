@@ -15,7 +15,7 @@ using EveCeoHelper.Helper;
 using EveCeoHelper.CoreData;
 
 
-namespace EveCeoHelper
+namespace EveCeoHelper.Controls
 {
     public partial class CorpPOS : UserControl
     {
@@ -60,41 +60,6 @@ namespace EveCeoHelper
             }
 
         }
-
-        /*private void POS_treeView_NodeMouseClick(object sender, TreeNodeMouseClickEventArgs e)
-        {
-
-            listBoxPOSDetails.Items.Clear();
-
-            //DataRow row = Convert.ToInt64(e.Node.Name);
-            
-            EveApiResponse<StarbaseDetails> posDetails = Corp.GetStarbaseDetails(selectedPOS.ItemId);
-            
-            string posLocation = Celestials.GetCelestialNameFromID(selectedPOS.LocationId);
-            EveOnlineRowCollection<StarbaseDetails.FuelEntry> fuelInfo = posDetails.Result.Fuel;
-
-            ImageList imgLst = GetImageListForPOSES();
-
-            listBoxPOSDetails.SmallImageList = imgLst;
-            int fuelQuantity = 0;
-            foreach(StarbaseDetails.FuelEntry fi in fuelInfo)
-            {
-                string fuelType = EveOnlineApi.Eve.GetTypeName(fi.TypeId).Result.Types[0].TypeName;
-
-                if (!fuelType.Equals("Strontium Clathrates"))
-                    fuelQuantity = fi.Quantity;
-
-                listBoxPOSDetails.Items.Add(fi.Quantity.ToString(), fi.TypeId.ToString());
-
-            }
-
-            listBoxPOSDetails.Items.Add("Tower-type: " + EveOnlineApi.Eve.GetTypeName(selectedPOS.TypeId).Result.Types.First().TypeName);
-            listBoxPOSDetails.Items.Add("Location: " + posLocation);
-            listBoxPOSDetails.Items.Add("Status: " + Convert.ToString(selectedPOS.State));
-            listBoxPOSDetails.Items.Add("Online since: " + posDetails.Result.OnlineTimestamp.ToShortDateString());
-            //listBoxPOSDetails.Items.Add(CalculateOfflineDate(fuelQuantity, EveOnlineApi.Eve.GetTypeName(selectedPOS.TypeId).Result.Types.First().TypeName));
-            //listBoxPOSDetails.Items.Add()
-        }*/
 
         private ImageList GetImageListForPOSES()
         {

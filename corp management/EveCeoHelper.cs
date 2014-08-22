@@ -89,8 +89,8 @@ namespace EveCeoHelper
             pictureBox1.Load(@"http://image.eveonline.com/Corporation/" + currentCorp.CorporationId + "_128.png");
                 //corpHelper.GetCorpImage());
 
-            corpPOS1.Corp = currentCorp;
-            corpPOS1.CorpPOSLoad();
+            //corpPOS1.Corp = currentCorp;
+            //corpPOS1.CorpPOSLoad();
 
         }
 

@@ -70,7 +70,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.corpPOS1 = new CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -88,6 +87,7 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.corpPOS1 = new Controls.CorpPOS();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -538,15 +538,6 @@
             this.tabPage7.Text = "POS";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // corpPOS1
-            // 
-            this.corpPOS1.Corp = null;
-            this.corpPOS1.Location = new System.Drawing.Point(7, 6);
-            this.corpPOS1.Name = "corpPOS1";
-            this.corpPOS1.POSes = null;
-            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
-            this.corpPOS1.TabIndex = 0;
-            // 
             // tabPage14
             // 
             this.tabPage14.Controls.Add(this.textBox2);
@@ -721,9 +712,18 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
+            // 
+            // corpPOS1
+            // 
+            this.corpPOS1.Corp = null;
+            this.corpPOS1.Location = new System.Drawing.Point(8, 7);
+            this.corpPOS1.Name = "corpPOS1";
+            this.corpPOS1.POSes = null;
+            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
+            this.corpPOS1.TabIndex = 0;
             // 
             // EveCeoHelper
             // 
@@ -821,17 +821,16 @@
         private System.Windows.Forms.TabPage tabPage20;
         private System.Windows.Forms.WebBrowser webBrowser2;
         private System.Windows.Forms.WebBrowser webBrowser3;
-        private CorpPOS corpPOS1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label7;
-        private CorpPOS corpPOS2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
+        private Controls.CorpPOS corpPOS1;
     }
 }
