@@ -168,5 +168,10 @@ namespace EveCeoHelper
             AboutDialog about = new AboutDialog();
             about.ShowDialog();
         }
+
+        private void dataGridView4_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
