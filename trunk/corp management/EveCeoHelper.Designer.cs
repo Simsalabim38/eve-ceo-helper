@@ -70,6 +70,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.corpPOS1 = new EveCeoHelper.Controls.CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -87,7 +88,9 @@
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.corpPOS1 = new Controls.CorpPOS();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -111,6 +114,7 @@
             this.tabPage19.SuspendLayout();
             this.tabPage20.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.tabPage9.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -538,6 +542,15 @@
             this.tabPage7.Text = "POS";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
+            // corpPOS1
+            // 
+            this.corpPOS1.Corp = null;
+            this.corpPOS1.Location = new System.Drawing.Point(8, 7);
+            this.corpPOS1.Name = "corpPOS1";
+            this.corpPOS1.POSes = null;
+            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
+            this.corpPOS1.TabIndex = 0;
+            // 
             // tabPage14
             // 
             this.tabPage14.Controls.Add(this.textBox2);
@@ -615,6 +628,7 @@
             // 
             this.tabControl5.Controls.Add(this.tabPage19);
             this.tabControl5.Controls.Add(this.tabPage20);
+            this.tabControl5.Controls.Add(this.tabPage9);
             this.tabControl5.Location = new System.Drawing.Point(-4, 3);
             this.tabControl5.Name = "tabControl5";
             this.tabControl5.SelectedIndex = 0;
@@ -716,14 +730,37 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // corpPOS1
+            // tabPage9
             // 
-            this.corpPOS1.Corp = null;
-            this.corpPOS1.Location = new System.Drawing.Point(8, 7);
-            this.corpPOS1.Name = "corpPOS1";
-            this.corpPOS1.POSes = null;
-            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
-            this.corpPOS1.TabIndex = 0;
+            this.tabPage9.Controls.Add(this.linkLabel2);
+            this.tabPage9.Controls.Add(this.linkLabel1);
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(1146, 615);
+            this.tabPage9.TabIndex = 2;
+            this.tabPage9.Text = "tabPage9";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(24, 32);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(73, 13);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Ore Buy Back";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(24, 58);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(85, 13);
+            this.linkLabel2.TabIndex = 1;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Ore Refine Stats";
             // 
             // EveCeoHelper
             // 
@@ -767,6 +804,8 @@
             this.tabPage20.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.tabPage9.ResumeLayout(false);
+            this.tabPage9.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -832,5 +871,8 @@
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private Controls.CorpPOS corpPOS1;
+        private System.Windows.Forms.TabPage tabPage9;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
