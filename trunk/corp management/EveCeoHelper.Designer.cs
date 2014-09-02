@@ -70,7 +70,6 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.corpPOS1 = new Widgets.CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -87,6 +86,7 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corpIndustryJobs1 = new Widgets.CorpIndustryJobs();
+            this.corpPOS1 = new Widgets.CorpPOS();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -538,15 +538,6 @@
             this.tabPage7.Text = "POS";
             this.tabPage7.UseVisualStyleBackColor = true;
             // 
-            // corpPOS1
-            // 
-            this.corpPOS1.Corp = null;
-            this.corpPOS1.Location = new System.Drawing.Point(8, 7);
-            this.corpPOS1.Name = "corpPOS1";
-            this.corpPOS1.POSes = null;
-            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
-            this.corpPOS1.TabIndex = 0;
-            // 
             // tabPage14
             // 
             this.tabPage14.Controls.Add(this.textBox2);
@@ -705,8 +696,17 @@
             this.corpIndustryJobs1.Corp = null;
             this.corpIndustryJobs1.Location = new System.Drawing.Point(7, 7);
             this.corpIndustryJobs1.Name = "corpIndustryJobs1";
-            this.corpIndustryJobs1.Size = new System.Drawing.Size(634, 348);
+            this.corpIndustryJobs1.Size = new System.Drawing.Size(898, 348);
             this.corpIndustryJobs1.TabIndex = 0;
+            // 
+            // corpPOS1
+            // 
+            this.corpPOS1.Corp = null;
+            this.corpPOS1.Location = new System.Drawing.Point(8, 7);
+            this.corpPOS1.Name = "corpPOS1";
+            this.corpPOS1.POSes = null;
+            this.corpPOS1.Size = new System.Drawing.Size(771, 439);
+            this.corpPOS1.TabIndex = 0;
             // 
             // EveCeoHelper
             // 

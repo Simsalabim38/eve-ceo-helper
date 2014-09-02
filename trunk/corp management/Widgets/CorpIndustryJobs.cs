@@ -27,7 +27,7 @@ namespace EveCeoHelper.Widgets
         public void LoadIndyJobs()
         {
             Industry indy = new Industry(Corp);
-            this.dataGridView1.DataSource = indy.IndyJobs.Tables;
+            dataGridView1.DataSource = indy.IndyJobs.Tables[0];
         }
     }
 }

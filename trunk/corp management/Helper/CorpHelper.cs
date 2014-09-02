@@ -1,5 +1,7 @@
-﻿using eZet.EveLib.Modules.Models;
+﻿using eZet.EveLib.Modules;
+using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules.Models.Character;
+using eZet.EveLib.Modules.Models.Corporation;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -132,6 +134,22 @@ namespace EveCeoHelper.Helper
                 _file = Directory.GetCurrentDirectory() + @"\" + _corp.CorporationId.ToString() + "_128.png";
             }
             return _file;
+        }
+
+        public string GetCorpFacilityNameByID(long FacilityID)
+        {
+            string fName = String.Empty;
+            EveApiResponse<Facilities> response = _corp.GetFacilities();
+            EveOnlineRowCollection<eZet.EveLib.Modules.Models.Corporation.Facilities.Facility> facilities = response.Result.FacilityEntries;
+            foreach(eZet.EveLib.Modules.Models.Corporation.Facilities.Facility f in facilities)
+            {
+                if(f.FacilityId.Equals(FacilityID))
+                {
+                    fName = EveOnlineApi.Eve.GetTypeName(f.TypeId).Result.Types.First().TypeName;
+                    break;
+                }
+            }
+            return fName;
         }
     }
 }
