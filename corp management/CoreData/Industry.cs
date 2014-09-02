@@ -53,11 +53,11 @@ namespace EveCeoHelper.CoreData
                 {
                     row = IndyTable.NewRow();
                     row["JobID"] = ijob.JobId;
-                    row["Status"] = ijob.Status;
+                    row["Status"] = GetActivityStatusByID(int.Parse(ijob.Status));
                     row["JobRuns"] = ijob.Runs;
-                    row["Activity"] = "test1";//EveOnlineApi.Eve.GetTypeName(ijob.ActivityId).Result.Types.First().TypeName;
+                    row["Activity"] = GetActivityNameByID(ijob.ActivityId);
                     row["Blueprint"] = ijob.BueprintTypeName;
-                    row["Facility"] = "test2"; //EveOnlineApi.Eve.GetTypeName(ijob.FacilityId).Result.Types.First().TypeName;
+                    row["Facility"] = (new Helper.CorpHelper(_corp).GetCorpFacilityNameByID(ijob.FacilityId));
                     row["InstallerName"] = ijob.InstallerName;
                     row["InstallDate"] = ijob.StartDateAsString;
                     row["EndDate"] = ijob.EndDateAsString;
@@ -78,6 +78,36 @@ namespace EveCeoHelper.CoreData
             IndyTable.Columns.Add("InstallerName", System.Type.GetType("System.String"));
             IndyTable.Columns.Add("InstallDate", System.Type.GetType("System.String"));
             IndyTable.Columns.Add("EndDate", System.Type.GetType("System.String"));
+        }
+
+        private string GetActivityNameByID(int ActivityID)
+        {
+            Dictionary<int, string> ActivityMapping = new Dictionary<int, string>();
+            ActivityMapping.Add(0, "None");
+            ActivityMapping.Add(1, "Manufactoring");
+            ActivityMapping.Add(2, "Researching");
+            ActivityMapping.Add(3, "Time efficiency");
+            ActivityMapping.Add(4, "Materials efficency");
+            ActivityMapping.Add(5, "Copying");
+            ActivityMapping.Add(6, "Duplicating");
+            ActivityMapping.Add(7, "Reverse Engineering");
+            ActivityMapping.Add(8, "Invention");
+
+            return ActivityMapping[ActivityID];
+        }
+
+        private string GetActivityStatusByID(int ID)
+        {
+            Dictionary<int, string> ActivityStatus = new Dictionary<int, string>();
+            ActivityStatus.Add(1, "Active");
+            ActivityStatus.Add(2, "Paused");
+            ActivityStatus.Add(3, "Ready");
+            ActivityStatus.Add(102, "Cancelled");
+            ActivityStatus.Add(103, "Reverted");
+            ActivityStatus.Add(104, "Delivered");
+            ActivityStatus.Add(105, "Failed");
+
+            return ActivityStatus[ID];
         }
 
     }
