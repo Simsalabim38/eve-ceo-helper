@@ -1,4 +1,4 @@
-﻿namespace EveCeoHelper.Controls
+﻿namespace EveCeoHelper.Widgets
 {
     partial class CorpPOS
     {

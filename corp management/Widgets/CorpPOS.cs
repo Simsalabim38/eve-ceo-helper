@@ -15,7 +15,7 @@ using EveCeoHelper.Helper;
 using EveCeoHelper.CoreData;
 
 
-namespace EveCeoHelper.Controls
+namespace EveCeoHelper.Widgets
 {
     public partial class CorpPOS : UserControl
     {
