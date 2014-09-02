@@ -70,22 +70,23 @@
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.corpPOS1 = new EveCeoHelper.Controls.CorpPOS();
+            this.corpPOS1 = new Widgets.CorpPOS();
             this.tabPage14 = new System.Windows.Forms.TabPage();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage18 = new System.Windows.Forms.TabPage();
+            this.tabControl5 = new System.Windows.Forms.TabControl();
+            this.tabPage9 = new System.Windows.Forms.TabPage();
+            this.tabPage10 = new System.Windows.Forms.TabPage();
+            this.tabPage13 = new System.Windows.Forms.TabPage();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tabControl5 = new System.Windows.Forms.TabControl();
-            this.tabPage9 = new System.Windows.Forms.TabPage();
-            this.tabPage10 = new System.Windows.Forms.TabPage();
-            this.tabPage13 = new System.Windows.Forms.TabPage();
+            this.corpIndustryJobs1 = new Widgets.CorpIndustryJobs();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -101,12 +102,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tabPage6.SuspendLayout();
             this.tabControl4.SuspendLayout();
+            this.tabPage11.SuspendLayout();
             this.tabPage17.SuspendLayout();
             this.tabPage7.SuspendLayout();
             this.tabPage14.SuspendLayout();
             this.tabPage18.SuspendLayout();
-            this.menuStrip1.SuspendLayout();
             this.tabControl5.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -443,6 +445,7 @@
             // 
             // tabPage11
             // 
+            this.tabPage11.Controls.Add(this.corpIndustryJobs1);
             this.tabPage11.Location = new System.Drawing.Point(4, 22);
             this.tabPage11.Name = "tabPage11";
             this.tabPage11.Padding = new System.Windows.Forms.Padding(3);
@@ -616,6 +619,46 @@
             this.tabPage18.UseVisualStyleBackColor = true;
             this.tabPage18.Click += new System.EventHandler(this.tabPage18_Click);
             // 
+            // tabControl5
+            // 
+            this.tabControl5.Controls.Add(this.tabPage9);
+            this.tabControl5.Controls.Add(this.tabPage10);
+            this.tabControl5.Location = new System.Drawing.Point(3, 0);
+            this.tabControl5.Name = "tabControl5";
+            this.tabControl5.SelectedIndex = 0;
+            this.tabControl5.Size = new System.Drawing.Size(986, 570);
+            this.tabControl5.TabIndex = 0;
+            // 
+            // tabPage9
+            // 
+            this.tabPage9.Location = new System.Drawing.Point(4, 22);
+            this.tabPage9.Name = "tabPage9";
+            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage9.Size = new System.Drawing.Size(978, 544);
+            this.tabPage9.TabIndex = 0;
+            this.tabPage9.Text = "Ore Buy back";
+            this.tabPage9.UseVisualStyleBackColor = true;
+            // 
+            // tabPage10
+            // 
+            this.tabPage10.Location = new System.Drawing.Point(4, 22);
+            this.tabPage10.Name = "tabPage10";
+            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage10.Size = new System.Drawing.Size(978, 544);
+            this.tabPage10.TabIndex = 1;
+            this.tabPage10.Text = "Ore Calculator";
+            this.tabPage10.UseVisualStyleBackColor = true;
+            // 
+            // tabPage13
+            // 
+            this.tabPage13.Location = new System.Drawing.Point(4, 22);
+            this.tabPage13.Name = "tabPage13";
+            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage13.Size = new System.Drawing.Size(1146, 573);
+            this.tabPage13.TabIndex = 8;
+            this.tabPage13.Text = "Links";
+            this.tabPage13.UseVisualStyleBackColor = true;
+            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -657,45 +700,13 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // tabControl5
+            // corpIndustryJobs1
             // 
-            this.tabControl5.Controls.Add(this.tabPage9);
-            this.tabControl5.Controls.Add(this.tabPage10);
-            this.tabControl5.Location = new System.Drawing.Point(3, 0);
-            this.tabControl5.Name = "tabControl5";
-            this.tabControl5.SelectedIndex = 0;
-            this.tabControl5.Size = new System.Drawing.Size(986, 570);
-            this.tabControl5.TabIndex = 0;
-            // 
-            // tabPage9
-            // 
-            this.tabPage9.Location = new System.Drawing.Point(4, 22);
-            this.tabPage9.Name = "tabPage9";
-            this.tabPage9.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage9.Size = new System.Drawing.Size(978, 544);
-            this.tabPage9.TabIndex = 0;
-            this.tabPage9.Text = "Ore Buy back";
-            this.tabPage9.UseVisualStyleBackColor = true;
-            // 
-            // tabPage10
-            // 
-            this.tabPage10.Location = new System.Drawing.Point(4, 22);
-            this.tabPage10.Name = "tabPage10";
-            this.tabPage10.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage10.Size = new System.Drawing.Size(978, 544);
-            this.tabPage10.TabIndex = 1;
-            this.tabPage10.Text = "Ore Calculator";
-            this.tabPage10.UseVisualStyleBackColor = true;
-            // 
-            // tabPage13
-            // 
-            this.tabPage13.Location = new System.Drawing.Point(4, 22);
-            this.tabPage13.Name = "tabPage13";
-            this.tabPage13.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage13.Size = new System.Drawing.Size(1146, 573);
-            this.tabPage13.TabIndex = 8;
-            this.tabPage13.Text = "Links";
-            this.tabPage13.UseVisualStyleBackColor = true;
+            this.corpIndustryJobs1.Corp = null;
+            this.corpIndustryJobs1.Location = new System.Drawing.Point(7, 7);
+            this.corpIndustryJobs1.Name = "corpIndustryJobs1";
+            this.corpIndustryJobs1.Size = new System.Drawing.Size(634, 348);
+            this.corpIndustryJobs1.TabIndex = 0;
             // 
             // EveCeoHelper
             // 
@@ -728,15 +739,16 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tabPage6.ResumeLayout(false);
             this.tabControl4.ResumeLayout(false);
+            this.tabPage11.ResumeLayout(false);
             this.tabPage17.ResumeLayout(false);
             this.tabPage17.PerformLayout();
             this.tabPage7.ResumeLayout(false);
             this.tabPage14.ResumeLayout(false);
             this.tabPage14.PerformLayout();
             this.tabPage18.ResumeLayout(false);
+            this.tabControl5.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.tabControl5.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -795,10 +807,11 @@
         private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
-        private Controls.CorpPOS corpPOS1;
+        private Widgets.CorpPOS corpPOS1;
         private System.Windows.Forms.TabControl tabControl5;
         private System.Windows.Forms.TabPage tabPage9;
         private System.Windows.Forms.TabPage tabPage10;
         private System.Windows.Forms.TabPage tabPage13;
+        private Widgets.CorpIndustryJobs corpIndustryJobs1;
     }
 }

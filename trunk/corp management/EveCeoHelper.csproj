@@ -69,36 +69,6 @@
     <AssemblyOriginatorKeyFile>EveCeoHelper_key.pfx</AssemblyOriginatorKeyFile>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EveLib.Core">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.Element43">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.Element43.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.EveCentral">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveCentral.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.EveCrest">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveCrest.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.EveMarketData">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveMarketData.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.EveOnline">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveOnline.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.EveWho">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.EveWho.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.StaticData">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.StaticData.dll</HintPath>
-    </Reference>
-    <Reference Include="EveLib.ZKillboard">
-      <HintPath>..\packages\eZet.EveLib.2.0.0\lib\EveLib.ZKillboard.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\packages\Newtonsoft.Json.6.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web.Services" />
@@ -124,19 +94,26 @@
     <Compile Include="ApiKeyInputForm.Designer.cs">
       <DependentUpon>ApiKeyInputForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CorpPOS.cs">
+    <Compile Include="Widgets\CorpIndustryJobs.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CorpPOS.Designer.cs">
+    <Compile Include="Widgets\CorpIndustryJobs.Designer.cs">
+      <DependentUpon>CorpIndustryJobs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Widgets\CorpPOS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Widgets\CorpPOS.Designer.cs">
       <DependentUpon>CorpPOS.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CorpWalletTransactions.cs">
+    <Compile Include="Widgets\CorpWalletTransactions.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CorpWalletTransactions.Designer.cs">
+    <Compile Include="Widgets\CorpWalletTransactions.Designer.cs">
       <DependentUpon>CorpWalletTransactions.cs</DependentUpon>
     </Compile>
     <Compile Include="CoreData\Celestials.cs" />
+    <Compile Include="CoreData\Industry.cs" />
     <Compile Include="CoreData\POS.cs" />
     <Compile Include="EveCeoHelper.cs">
       <SubType>Form</SubType>
@@ -144,10 +121,10 @@
     <Compile Include="EveCeoHelper.Designer.cs">
       <DependentUpon>EveCeoHelper.cs</DependentUpon>
     </Compile>
-    <Compile Include="Controls\CorpDetails.cs">
+    <Compile Include="Widgets\CorpDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Controls\CorpDetails.Designer.cs">
+    <Compile Include="Widgets\CorpDetails.Designer.cs">
       <DependentUpon>CorpDetails.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\CorpHelper.cs" />
@@ -160,16 +137,19 @@
     <EmbeddedResource Include="ApiKeyInputForm.resx">
       <DependentUpon>ApiKeyInputForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CorpPOS.resx">
+    <EmbeddedResource Include="Widgets\CorpIndustryJobs.resx">
+      <DependentUpon>CorpIndustryJobs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Widgets\CorpPOS.resx">
       <DependentUpon>CorpPOS.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CorpWalletTransactions.resx">
+    <EmbeddedResource Include="Widgets\CorpWalletTransactions.resx">
       <DependentUpon>CorpWalletTransactions.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EveCeoHelper.resx">
       <DependentUpon>EveCeoHelper.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Controls\CorpDetails.resx">
+    <EmbeddedResource Include="Widgets\CorpDetails.resx">
       <DependentUpon>CorpDetails.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -183,7 +163,6 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="EveCeoHelper_key.pfx" />
-    <None Include="packages.config" />
     <None Include="Properties\DataSources\EveCeoHelper.CoreData.POS.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -220,7 +199,48 @@
     <Content Include="aperture-6x.ico" />
     <None Include="Resources\EVEOnlineLogo.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.Core\EveLib.Core.csproj">
+      <Project>{aa85978c-2bf5-419f-9f8e-b70162e83f34}</Project>
+      <Name>EveLib.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.Element43\EveLib.Element43.csproj">
+      <Project>{91c78379-3d32-4131-8cd7-c1e8876d0933}</Project>
+      <Name>EveLib.Element43</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.EveCentral\EveLib.EveCentral.csproj">
+      <Project>{fcd48e90-6605-4bc1-b761-0b37df390990}</Project>
+      <Name>EveLib.EveCentral</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.EveCrest\EveLib.EveCrest.csproj">
+      <Project>{f81627b3-99af-4b4f-926a-685d21569451}</Project>
+      <Name>EveLib.EveCrest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.EveMarketData\EveLib.EveMarketData.csproj">
+      <Project>{185e2271-bba1-4071-ac46-bf47153bdb7a}</Project>
+      <Name>EveLib.EveMarketData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.EveOnline\EveLib.EveOnline.csproj">
+      <Project>{655ca737-cd94-4128-b2b5-dce37ea6e7f8}</Project>
+      <Name>EveLib.EveOnline</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.EveStaticData\EveLib.StaticData.csproj">
+      <Project>{25a492fe-1004-4a0b-aad3-b5395c2d47ea}</Project>
+      <Name>EveLib.StaticData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.EveWho\EveLib.EveWho.csproj">
+      <Project>{a11f0424-9183-4c54-9d0e-ad82bc9d6923}</Project>
+      <Name>EveLib.EveWho</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib.ZKillboard\Evelib.ZKillboard.csproj">
+      <Project>{741bdd36-b71c-4abe-9b03-185fbd6767f4}</Project>
+      <Name>Evelib.ZKillboard</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\GitHub\evelib\EveLib\EveLib.csproj">
+      <Project>{845b3203-b28a-4038-9e4d-48cd9d2e8a45}</Project>
+      <Name>EveLib</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
     <PostBuildEvent>

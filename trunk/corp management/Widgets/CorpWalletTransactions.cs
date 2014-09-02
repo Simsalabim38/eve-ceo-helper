@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using EveCeoHelper.Helper;
 using eZet.EveLib.Modules;
 
-namespace EveCeoHelper.Controls
+namespace EveCeoHelper.Widgets
 {
     public partial class CorpWalletTransactions : UserControl
     {

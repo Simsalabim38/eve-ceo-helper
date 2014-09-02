@@ -1,7 +1,10 @@
 ﻿using EveCeoHelper.Helper;
+using eZet.EveLib.Core.Exceptions;
 using eZet.EveLib.Modules;
+using eZet.EveLib.Modules.Exceptions;
 using eZet.EveLib.Modules.Models;
 using eZet.EveLib.Modules.Models.Account;
+using eZet.EveLib.Modules.Models.Character;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -87,10 +90,12 @@ namespace EveCeoHelper
             dataGridView1.Sort(dataGridView1.Columns[1], ListSortDirection.Descending);
 
             pictureBox1.Load(@"http://image.eveonline.com/Corporation/" + currentCorp.CorporationId + "_128.png");
-                //corpHelper.GetCorpImage());
 
             corpPOS1.Corp = currentCorp;
             corpPOS1.CorpPOSLoad();
+
+            corpIndustryJobs1.Corp = currentCorp;
+            corpIndustryJobs1.LoadIndyJobs();
 
         }
 
