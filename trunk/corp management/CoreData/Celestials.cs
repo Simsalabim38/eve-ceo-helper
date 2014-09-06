@@ -4,6 +4,9 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SQLite;
+using System.Diagnostics;
+
 
 namespace EveCeoHelper.CoreData
 {
@@ -16,24 +19,23 @@ namespace EveCeoHelper.CoreData
 
         public static string GetCelestialNameFromID(long id)
         {
-            string csvFile = @".\StaticData\mapDenormalize.csv";
-            string _id = id.ToString();
-            char csvSeperator = ',';
-            string resultLine = String.Empty;
-
-            foreach (string line in File.ReadLines(csvFile))
+            
+            const string filename = @"StaticData\mapDenormalize.sql";
+            string sql = "select itemname from celestial where itemid = '" + Convert.ToString(id) + "';";
+            var conn = new SQLiteConnection("Data Source=" + filename + ";Version=3;");
+            string _returnValue = String.Empty;
+            try
             {
-                foreach (string value in line.Replace("\"", "").Split('\r', '\n', csvSeperator))
-                    if (value.Trim() == _id.Trim())
-                    {
-                        resultLine = line;
-                        break;
-                    }
-                if (!String.IsNullOrEmpty(resultLine))
-                    break;
+                conn.Open();
+                var da = new SQLiteCommand(sql, conn);
+                _returnValue = (string)da.ExecuteScalar();
+                
+            } catch (Exception ex)
+            {
+                throw new Exception("Error while retrieving celestial name from database: " + ex.Message);
             }
-
-            return resultLine.Split(',')[11].Replace("\"", "");
+            
+            return _returnValue;
         }
     }
 }
