@@ -49,7 +49,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(18, 26);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(858, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(1056, 299);
             this.dataGridView1.TabIndex = 2;
             // 
             // CorpIndustryJobs
@@ -59,7 +59,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label1);
             this.Name = "CorpIndustryJobs";
-            this.Size = new System.Drawing.Size(899, 348);
+            this.Size = new System.Drawing.Size(1093, 348);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
